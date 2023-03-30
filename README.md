@@ -19,7 +19,7 @@ To use this application, you will need to have Node.js and npm (Node Package Man
 Clone this repository to your local machine.
 
 Copy code
-### git clone https://github.com/your-username/ambady-foods.git
+### git clone https://github.com/greenhat-cyber/ambady-foods.git
 
 Change into the project directory.
 
