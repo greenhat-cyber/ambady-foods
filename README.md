@@ -1,7 +1,8 @@
-#Ambady Foods - Bakery Products Delivery
+# Ambady Foods - Bakery Products Delivery
+
 Welcome to the Ambady Foods project repository! This is a web application that allows users to order bakery products online and get them delivered to their doorstep. The project is still under development and the new modern UI is being implemented using React JS.
 
-Features
+## Features
 The following are some of the features that will be implemented in the Ambady Foods project:
 
 A user-friendly interface that is easy to navigate and use
@@ -18,22 +19,22 @@ To use this application, you will need to have Node.js and npm (Node Package Man
 Clone this repository to your local machine.
 
 Copy code
-git clone https://github.com/your-username/ambady-foods.git
+### git clone https://github.com/your-username/ambady-foods.git
 
 Change into the project directory.
 
 Copy code
-cd ambady-foods
+### cd ambady-foods
 
 Install the dependencies.
 
 Copy code
-npm install
+### npm install
 
 Start the development server.
 
 Copy code
-npm start
+### npm start
 
 Open a web browser and navigate to http://localhost:3000 to view the application.
 Contributing
