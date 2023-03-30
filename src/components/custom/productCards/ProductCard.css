@@ -1,0 +1,12 @@
+.card-body1 {
+    width: 30%;
+    height: 27vh;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  
+  .stage{
+    position: relative !important;
+    left: 70px !important;
+    top: 16px !important;
+  }

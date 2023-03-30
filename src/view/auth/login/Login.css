@@ -1,0 +1,83 @@
+.Social-media-body {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-bg {
+  background: #f7971e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ffd200,
+    #f7971e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ffd200,
+    #f7971e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.login-body2 {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-body {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  border-radius: 50px;
+  outline-style: none;
+  border-color: #000000;
+}
+
+.form-control:focus {
+  border-color: #000000;
+  background-color: #fff !important;
+}
+
+input:active,
+input:focus,
+input:hover,
+input:visited,
+input.active,
+input.focus,
+input.hover,
+input.visited,
+button:active,
+button:focus,
+button:hover,
+button:visited,
+button.active,
+button.focus,
+button.hover,
+button.visited {
+  box-shadow: unset !important;
+  outline: 0 !important;
+}
+
+.box{
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+}
+
+
+/* media Query */
+
+@media only screen and (max-width:992px) {
+  .right-bg{
+      display: none;
+  }
+  
+}

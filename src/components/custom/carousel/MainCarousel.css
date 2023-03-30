@@ -1,0 +1,40 @@
+.carousel-inner{
+    border-radius: 20px;
+    color: black;
+}
+
+.carousel-control-next-icon{
+    color: black !important;
+}
+
+
+/* CategoryCarousel */
+
+.category-body {
+  background-color: #fff;
+  width: 7rem;
+  color: black;
+  height: 8rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.circle-bg {
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.category-body:hover{
+  background-color: #ffc107;
+  color: #fff;
+  transform: translateY(-10px)
+}
