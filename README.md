@@ -2,6 +2,8 @@
 
 Welcome to the Ambady Foods project repository! This is a web application that allows users to order bakery products online and get them delivered to their doorstep. The project is still under development and the new modern UI is being implemented using React JS.
 
+## Hosted Link - https://ambady-foods.netlify.app/
+
 ## Features
 The following are some of the features that will be implemented in the Ambady Foods project:
 
