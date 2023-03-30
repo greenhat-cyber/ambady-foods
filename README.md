@@ -19,22 +19,22 @@ To use this application, you will need to have Node.js and npm (Node Package Man
 Clone this repository to your local machine.
 
 Copy code
-### git clone https://github.com/greenhat-cyber/ambady-foods.git
+### `git clone https://github.com/greenhat-cyber/ambady-foods.git`
 
 Change into the project directory.
 
 Copy code
-### cd ambady-foods
+### `cd ambady-foods`
 
 Install the dependencies.
 
 Copy code
-### npm install
+### `npm install`
 
 Start the development server.
 
 Copy code
-### npm start
+### `npm start`
 
 Open a web browser and navigate to http://localhost:3000 to view the application.
 Contributing
