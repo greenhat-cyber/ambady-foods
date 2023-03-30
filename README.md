@@ -18,7 +18,7 @@ Integration with social media platforms to allow users to share their purchases 
 Installation and Usage
 To use this application, you will need to have Node.js and npm (Node Package Manager) installed on your machine.
 
-Clone this repository to your local machine.
+## Clone this repository to your local machine.
 
 Copy code
 ### `git clone https://github.com/greenhat-cyber/ambady-foods.git`
