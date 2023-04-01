@@ -15,7 +15,6 @@ const Navbar = () => {
     settoggle(false);
   }, [toggle]);
 
-  console.log(loc);
   const sidebarData = [
     {
       title: "Home",
@@ -60,7 +59,6 @@ const Navbar = () => {
             >
               <ul
                 className={`${loc === items.path ? "active" : ""} p-0 m-3 `}
-             
                 style={
                   loc === items.path
                     ? {

@@ -3,6 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import Loading from "../components/custom/Loading/Loading";
 import Default from "../Layout/default";
+import Simple from "../Layout/simple";
+import Login from "../view/auth/login/Login";
+import Registration from "../view/auth/registration/Registration";
 
 import Cart from "../view/Cart/Cart";
 import Home from "../view/Home/Home";
@@ -23,6 +26,9 @@ const IndexRouters = () => {
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/cart" element={<Cart />} />
             </Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="/registration" element={<Registration />} />
+            <Route path="*" element={<h1> 404 Not Found</h1>} />
           </Routes>
         </Suspense>
       </CSSTransition>

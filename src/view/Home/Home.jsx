@@ -1,82 +1,96 @@
-import React, { Fragment } from "react";
-import { Col, Form, Row } from "react-bootstrap";
+import React, { Fragment, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import "./Home.css";
 
-import { BsSearch } from "react-icons/bs";
 import MainCarousel from "../../components/custom/carousel/MainCarousel";
 import CategoryCarousel from "../../components/custom/carousel/CategoryCarousel";
 import ProductCard from "../../components/custom/productCards/ProductCard";
+import InputBox from "../../components/custom/Input/InputBox";
+import { categoryData, productData } from "../../util/data";
+import CustomPagination from "../../components/custom/CustomPagination/CustomPagination";
 
 const Home = () => {
-  const data = [
-    {
-      logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/14-Cake-256.png",
-      name: "Cake",
-    },
-    {
-      logo: "https://cdn0.iconfinder.com/data/icons/bakery-and-dessert-color/64/Chocolate_dessert_food_icon_sweet_doodle-256.png",
-      name: "Chocolate",
-    },
-    {
-      logo: "https://cdn1.iconfinder.com/data/icons/fast-food-181/512/Cake-256.png",
-      name: "Ice Cream",
-    },
-    {
-      logo: "https://cdn1.iconfinder.com/data/icons/cake-flat-1/64/cake-08-256.png",
-      name: "Cream Cake",
-    },
-    {
-      logo: "https://cdn3.iconfinder.com/data/icons/food-1272/64/burger-64.png",
-      name: "Burger",
-    },
-    {
-      logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/27-Donut-64.png",
-      name: "Doughnut",
-    },
-    {
-      logo: "https://cdn0.iconfinder.com/data/icons/food-and-drinks-1-8/36/9-64.png",
-      name: "Chocolate Cake",
-    },
-    {
-      logo: "https://cdn4.iconfinder.com/data/icons/food-and-drinks-2-8/36/166-64.png",
-      name: "Cake",
-    },
-  ];
+  const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+  const handleInputChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    console.log(search);
+  };
+
+  // Calculate the index of the first and last item to display on the current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  // Slice the productData array based on the index of the first and last items
+  const currentProducts = productData.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <Fragment>
-      <Row className="p-3 pb-2">
+      <Row className="p-1 pb-2">
         <Col>
-          <h4>Home</h4>
+          <h4 className="p-0 m-0">Home</h4>
         </Col>
-        <Col>
-          <Form style={{ display: "flex", justifyContent: "right" }}>
-            <Form.Control
-              className="p-2 ps-3 inp-style w-50"
-              placeholder="search by food name"
-            ></Form.Control>
-            <BsSearch style={{ position: "absolute", top: "3.2rem" }} />
-          </Form>
+        <Col
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
+        >
+          <InputBox
+            value={search}
+            type="text"
+            placeholder="Search products here"
+            onChange={handleInputChange}
+            handleSubmit={handleSubmit}
+          />
         </Col>
       </Row>
-      <Row className="p-3">
+      <Row className="p-1">
         <Col md={12}>
           <MainCarousel />
         </Col>
       </Row>
-      <Row className="p-3">
+      <Row className="p-1">
         <h4 className="pb-2"> Category </h4>
-        {data.map((items, idx) => {
+        {categoryData.map((items, idx) => {
           return (
-            <Col className="pt-2">
+            <Col xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4">
               <CategoryCarousel products={items.logo} title={items.name} />
             </Col>
           );
         })}
       </Row>
-      <Row className="p-3" >
-        <Col>
-          <ProductCard />
+      <Row className="p-1 mt-4 ps-4 ">
+        {currentProducts.map((product, idx) => {
+          return (
+            <Col key={idx} md={4} xs={6}>
+              <ProductCard
+                name={product.title}
+                image={product.image}
+                description={product.previewDescription}
+                price={product.price}
+              />
+            </Col>
+          );
+        })}
+      </Row>
+      <Row>
+        <Col style={{display:"flex",alignItems:"center",justifyContent:"center"}} >
+          <CustomPagination
+            totalItems={productData.length}
+            itemsPerPage={itemsPerPage}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </Col>
       </Row>
     </Fragment>

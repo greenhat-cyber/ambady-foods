@@ -1,12 +1,12 @@
 import React, { memo, Fragment } from "react";
-import SimpleRouter from "../router/simple-router";
+import { Outlet } from "react-router-dom";
 
 const Simple = memo((props) => {
   return (
     <Fragment>
       <main>
         <div>
-          <SimpleRouter />
+          <Outlet/>
         </div>
       </main>
     </Fragment>

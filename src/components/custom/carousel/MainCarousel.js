@@ -7,14 +7,14 @@ const MainCarousel = () => {
     {
       image: "image/slider-1.jpg",
     },
-    // {
-    //   image:
-    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFusOMV7-vhjacakU8DNMJZMy1ZPEbtdId5w&usqp=CAU",
-    // },
-    // {
-    //   image:
-    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFusOMV7-vhjacakU8DNMJZMy1ZPEbtdId5w&usqp=CAU",
-    // },
+    {
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFusOMV7-vhjacakU8DNMJZMy1ZPEbtdId5w&usqp=CAU",
+    },
+    {
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFusOMV7-vhjacakU8DNMJZMy1ZPEbtdId5w&usqp=CAU",
+    },
   ];
   return (
     <>
@@ -28,12 +28,6 @@ const MainCarousel = () => {
                 src={items?.image}
                 alt="First slide"
               />
-              {/* <Carousel.Caption>
-                <h5>First slide label</h5>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption> */}
             </CarouselItem>
           );
         })}

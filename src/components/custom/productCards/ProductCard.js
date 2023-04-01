@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { Col } from "react-bootstrap";
+import { Button, Col } from "react-bootstrap";
 import "./ProductCard.css";
-import TwitterHeart from "twitter-heart";
-const ProductCard = () => {
-  const [isLiked, setClick] = useState(false);
+
+const ProductCard = (props) => {
+  const [active, setActive] = useState("");
+
+  console.log(active);
+
+  const addToWishList = () => {
+    setActive("animate");
+  };
+
   return (
-    <div className="card-body1 row">
+    <div className="card-body1 row shadow-sm ">
       <Col
         md={6}
         style={{
@@ -22,24 +29,41 @@ const ProductCard = () => {
             borderRadius: "50%",
             objectFit: "cover",
           }}
-          src="https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&w=600"
+          src={props.image}
           alt="product"
         />
       </Col>
       <Col md={6} className="text-dark">
         <div
-        className="pt-3"
           style={{
             display: "flex",
-            height:"fit-content",
-            justifyContent: "space-between",
+            height: "40px",
           }}
         >
-          <h3>Cake</h3>
-
-          <TwitterHeart isLiked={isLiked} onClick={() => setClick(!isLiked)} />
+          <h6 className="m-0">{props.name}</h6>
+          <div
+            onClick={addToWishList}
+            className={`HeartAnimation ${active}`}
+          ></div>
         </div>
-        
+
+        <div style={{ display: "flex" }}>
+          <p className="m-0" style={{ fontSize: ".6rem", color: "gray" }}>
+            {props.description}
+          </p>
+        </div>
+        <div className="mt-3" style={{ display: "flex", alignItems: "center" }}>
+          <h6 className="m-0 me-3" style={{ fontSize: "1rem" }}>
+            {props.price}
+          </h6>
+
+          <Button
+            className="newbtn"
+            style={{ backgroundColor: "#ffc107", color: "#111" }}
+          >
+            Buy Now
+          </Button>
+        </div>
       </Col>
     </div>
   );

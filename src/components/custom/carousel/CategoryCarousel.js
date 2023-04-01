@@ -10,7 +10,7 @@ const CategoryCarousel = (props) => {
           alt="im"
         />
       </div>
-      <p className="pt-2">{props.title}</p>
+      <p className="pt-2" style={{fontSize:".7rem"}}>{props.title}</p>
     </div>
   );
 };

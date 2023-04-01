@@ -37,13 +37,13 @@
 }
 
 .login-form {
-  border-radius: 50px;
-  outline-style: none;
-  border-color: #000000;
+  border-radius: 50px !important;
+  outline-style: none !important;
+  border-color: #c3c3c3 !important;
 }
 
 .form-control:focus {
-  border-color: #000000;
+  border-color: #c3c3c3 !important;
   background-color: #fff !important;
 }
 
@@ -68,8 +68,7 @@ button.visited {
 }
 
 .box{
-  overflow-y: hidden; 
-  overflow-x: hidden; 
+  width: 100%;
 }
 
 

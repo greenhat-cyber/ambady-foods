@@ -7,16 +7,16 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 260px;
+  width: 255px;
 }
 
 .content {
-  background-color: #111;
+  background-color: #f0e5d1;
   height: 100vh;
-  color: #fff;
+  color: #111;
   flex: 1;
   overflow-y: auto;
-  margin-left: 260px;
+  margin-left: 255px;
   padding: 20px;
 }
 

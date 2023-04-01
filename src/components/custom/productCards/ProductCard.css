@@ -1,12 +1,43 @@
 .card-body1 {
-    width: 30%;
-    height: 27vh;
+  width: 100%;
+  height: 90%;
     border-radius: 20px;
     background-color: #fff;
+    padding: .5rem;
+    margin-bottom: 2rem;
   }
   
-  .stage{
-    position: relative !important;
-    left: 70px !important;
-    top: 16px !important;
+
+  .HeartAnimation {
+    position: relative;
+    bottom: .8rem;
+    left: 1rem;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    background-position: left;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    cursor: pointer;
   }
+  
+  .animate {
+    animation: heart-burst .8s steps(28) forwards;
+  }
+  
+  @keyframes heart-burst {
+    0% {
+      background-position: left
+    }
+    100% {
+      background-position: right
+    }
+  }
+
+.newbtn:hover{
+  transition: ease 500ms;
+  transform: scale(1.1);
+  background-color:#111 !important;
+  color: #ffca2c !important;
+}

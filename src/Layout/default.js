@@ -1,16 +1,16 @@
 import Navbar from "../components/Headers/navbar/Navbar";
 import React from "react";
 import "./sidebar.css";
-import { Outlet } from "react-router-dom";
-// import MobNav from "../components/Headers/mob-nav/MobNav";
+import { Navigate, Outlet } from "react-router-dom";
 const Default = () => {
+  let auth = localStorage.getItem("token");
   return (
-    <div class="box">
-      <div class="sidebar">
+    <div className="box">
+      <div className="sidebar">
         <Navbar />
       </div>
-      <div class="content">
-        <Outlet />
+      <div className="content">
+        {auth ? <Outlet /> : <Navigate to={"/login"} />}
       </div>
     </div>
   );

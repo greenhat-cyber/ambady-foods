@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import "./Login.css";
 
@@ -8,23 +8,24 @@ import { AiFillGoogleCircle } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import Welcome from "../../../components/custom/welcome/Welcome";
-// import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    localStorage.setItem("admin", "okdone");
-  }, []);
+  // useEffect(() => {
+  //   localStorage.setItem("token", true);
+  // }, []);
 
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-  //   localStorage.setItem("admin", "okdone");
-  //   navigate.push("/home");
-  // };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    localStorage.setItem("token", true);
+
+    navigate("/");
+  };
   return (
-    <div className="box">
-      <Row>
+    <div className="box row">
+
         <Col sm={12} md={6} className="right-bg">
           <Welcome />
         </Col>
@@ -67,8 +68,8 @@ const Login = () => {
           </div>
           <div style={{ display: "flex", placeContent: "center" }}>
             <Button
-              href="/home"
-              // onClick={(e) => handleLogin(e)}
+             
+              onClick={(e) => handleLogin(e)}
               className="pe-5 ps-5 btn-warning"
             >
               Sign In
@@ -83,16 +84,16 @@ const Login = () => {
             }}
           >
             <p>don't have an account?</p>
-            <a
-              href="/registration"
+            <NavLink
+              to="/registration"
               className="text-warning fw-bold ps-2"
               style={{ textDecoration: "none" }}
             >
               sign up
-            </a>
+            </NavLink>
           </div>
         </Col>
-      </Row>
+      
     </div>
   );
 };
