@@ -31,11 +31,11 @@ const Products = () => {
 
   return (
     <div>
-      <Row className="p-1 ps-4">
+      <Row className="p-1 ps-4 pt-3">
         <Col>
           <h3>Product List</h3>
         </Col>
-        <Col style={{ display: "flex", justifyContent: "flex-end" }}>
+        <Col className="newInp2 pe-4 pb-2" style={{ display: "flex", justifyContent: "flex-end" }}>
           <InputBox
             value={search}
             type="text"
@@ -45,7 +45,7 @@ const Products = () => {
           />
         </Col>
       </Row>
-      <Row className="p-1 mt-4 ps-4 ">
+      <Row className="p-1 mt-1 ps-4 ">
         {currentProducts.map((product, idx) => {
           return (
             <Col key={idx} md={4} xs={6}>

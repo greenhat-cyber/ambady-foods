@@ -28,3 +28,11 @@ button.visited {
   outline: 0 !important;
 }
 
+
+@media only screen and (max-width: 992px) {
+  .newInp {
+      display: none !important;
+
+
+  }
+}

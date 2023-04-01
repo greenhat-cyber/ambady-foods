@@ -34,11 +34,12 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Row className="p-1 pb-2">
+      <Row className="p-1 pb-2 pt-3 ">
         <Col>
           <h4 className="p-0 m-0">Home</h4>
         </Col>
         <Col
+        className="newInp"
           style={{
             display: "flex",
             alignItems: "center",
@@ -46,6 +47,7 @@ const Home = () => {
           }}
         >
           <InputBox
+          
             value={search}
             type="text"
             placeholder="Search products here"
@@ -59,7 +61,7 @@ const Home = () => {
           <MainCarousel />
         </Col>
       </Row>
-      <Row className="p-1">
+      <Row className="p-1 pt-3">
         <h4 className="pb-2"> Category </h4>
         {categoryData.map((items, idx) => {
           return (
