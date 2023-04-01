@@ -105,7 +105,7 @@
   top: -45px;
   width: 72px;
   height: 72px;
-  background-color: #ffd145;
+  background-color: black;
   border-radius: 50%;
   border: 4px solid #f0e5d1;
   transition: 0.5s;
@@ -155,16 +155,16 @@
 
 @media only screen and (max-width: 822px) {
   .navigation ul li:nth-child(1).active2 ~ .indicator {
-    transform: translateX(calc(97px * 0)) !important;
+    transform: translateX(calc(98px * 0)) !important;
   }
   .navigation ul li:nth-child(2).active2 ~ .indicator {
-    transform: translateX(calc(97px * 1)) !important;
+    transform: translateX(calc(98px * 1)) !important;
   }
   .navigation ul li:nth-child(3).active2 ~ .indicator {
-    transform: translateX(calc(97px * 2)) !important;
+    transform: translateX(calc(98px * 2)) !important;
   }
   .navigation ul li:nth-child(4).active2 ~ .indicator {
-    transform: translateX(calc(97px * 3)) !important;
+    transform: translateX(calc(98px * 3)) !important;
   }
 }
 @media only screen and (max-width: 515px) {

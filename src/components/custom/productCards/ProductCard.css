@@ -51,9 +51,7 @@
     width: 110px !important;
     height: 110px !important;
   }
-  .card-body1{
-    
-  }
+
 }
 @media only screen and (max-width: 740px) {
   .newbtn{
@@ -64,7 +62,5 @@
     width: 110px !important;
     height: 110px !important;
   }
-  .card-body1{
-    
-  }
+
 }
