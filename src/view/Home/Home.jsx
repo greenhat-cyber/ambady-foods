@@ -85,7 +85,7 @@ const Home = () => {
           );
         })}
       </Row>
-      <Row>
+      <Row className="pagination-bottom" >
         <Col style={{display:"flex",alignItems:"center",justifyContent:"center"}} >
           <CustomPagination
             totalItems={productData.length}

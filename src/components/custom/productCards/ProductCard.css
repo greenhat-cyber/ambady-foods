@@ -41,3 +41,30 @@
   background-color:#111 !important;
   color: #ffca2c !important;
 }
+
+@media only screen and (max-width: 480px) {
+  .newbtn{
+    font-size: .7rem !important;
+    /* height: fit-content; */
+  }
+  .card-img1{
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .card-body1{
+    
+  }
+}
+@media only screen and (max-width: 740px) {
+  .newbtn{
+    font-size: .5rem !important;
+    /* height: fit-content; */
+  }
+  .card-img1{
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .card-body1{
+    
+  }
+}

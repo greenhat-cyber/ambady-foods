@@ -12,9 +12,10 @@ const ProductCard = (props) => {
   };
 
   return (
-    <div className="card-body1 row shadow-sm ">
+    <div className="card-body1 row shadow-sm  ">
       <Col
         md={6}
+        className="pb-2"
         style={{
           display: "flex",
           alignItems: "center",
@@ -22,7 +23,7 @@ const ProductCard = (props) => {
         }}
       >
         <img
-          className="shadow-sm "
+          className="shadow-sm card-img1"
           style={{
             width: "150px",
             height: "150px",

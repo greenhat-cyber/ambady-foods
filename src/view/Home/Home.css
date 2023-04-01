@@ -35,4 +35,7 @@ button.visited {
 
 
   }
+  .pagination-bottom{
+    padding-bottom: 12rem;
+  }
 }
