@@ -14,13 +14,14 @@
     outline: none;
     border: 1px solid #ffc107;
     border-radius: 9px 0 0 9px;
-    background: #F4FAF9;
+    background: #ffffff;
+    font-size: .7rem;
     transition: background 0.25s, box-shadow 0.25s;
 }
 
-.searchbar__input:focus {
+/* .searchbar__input:focus {
     background: white;
-}
+} */
 
 .searchbar__input::placeholder {
     color: #7d7d7d;
