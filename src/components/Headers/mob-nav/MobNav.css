@@ -157,7 +157,7 @@
 
 @media only screen and (max-width: 576px) {
   .navigation ul li:nth-child(1).active2 ~ .indicator {
-    transform: translateX(calc(120px * 0)) !important;
+    transform: translateX(calc(88px * 0)) !important;
   }
   .navigation ul li:nth-child(2).active2 ~ .indicator {
     transform: translateX(calc(100px * 1)) !important;
