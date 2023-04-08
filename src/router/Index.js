@@ -12,6 +12,7 @@ import Home from "../view/Home/Home";
 import Products from "../view/Products/Products";
 import Settings from "../view/Settings/Settings";
 import Wishlist from "../view/Wishlist/Wishlist";
+import ProductDetails from "../view/Products/productDetails/ProductDetails";
 
 const IndexRouters = () => {
   return (
@@ -25,6 +26,7 @@ const IndexRouters = () => {
               <Route path="/settings" element={<Settings />} />
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/product-details/:id" element={<ProductDetails />} />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />

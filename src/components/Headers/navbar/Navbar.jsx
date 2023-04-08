@@ -62,17 +62,19 @@ const Navbar = () => {
                 style={
                   loc === items.path
                     ? {
-                        boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.142)",
+                        boxShadow: "0px 0px 3px 0px rgba(0, 0, 0, 0.142)",
+                        // boxShadow: "0px 0px 3px 0px rgba(0, 0, 0, 0.142)",
                         display: "flex",
                         alignItems: "center",
-                        borderRadius: "10px",
+                        borderRadius: "8px",
                         flexDirection: "row",
                       }
-                    : {
-                        boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.142)",
+                      : {
+                      boxShadow: "0px 0px 3px 0px rgba(0, 0, 0, 0.142)",
+                        // boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.142)",
                         display: "flex",
                         alignItems: "center",
-                        borderRadius: "10px",
+                        borderRadius: "8px",
                         flexDirection: "row",
                       }
                 }

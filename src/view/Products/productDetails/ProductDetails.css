@@ -1,0 +1,109 @@
+.img {
+  border-radius: 10px;
+  width: 440px;
+  height: 450px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.min-img-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.min-img {
+  /* box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; */
+  border-radius: 10px;
+  width: 65px;
+  height: 65px;
+  /* border: solid 3px #ffc107; */
+}
+.min-img:hover {
+  border: solid 3px #ffc107;
+}
+
+.HeartAnimation {
+  position: relative;
+  bottom: 0.8rem;
+  left: 1rem;
+  top: .1rem;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png");
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  background-position: left;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.text {
+  max-width: 600px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1.1rem;
+}
+.text-btn {
+  color: #d49f00;
+  cursor: pointer;
+  width: fit-content;
+  appearance: none;
+  /* border: 1px solid #000;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -ms-border-radius: 0.25em;
+    -o-border-radius: 0.25em; */
+}
+.text-btn::before {
+  content: "see more";
+  text-transform: capitalize;
+}
+.text-btn:checked::before {
+  content: "see less";
+}
+.text:has(+ .text-btn:checked) {
+  -webkit-line-clamp: initial;
+}
+
+.newbtn2 {
+  background-color: unset !important;
+  color: #111 !important;
+  border: solid 1px #ffc107 !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.newbtn2:hover {
+  transition: ease 500ms;
+  transform: scale(0.9);
+  background-color: unset !important;
+  color: #111 !important;
+  border: solid 1px #ffc107 !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+@media only screen and (max-width: 740px) {
+  .img{
+    width: 300px;
+    height: 300px;
+  }
+  .img-box{
+    display: flex;
+  }
+  .min-img-box{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .productDetails-container{
+    padding: 1rem;
+  }
+}

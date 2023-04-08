@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import InputBox from "../../components/custom/Input/InputBox";
+import { Col, Row } from "react-bootstrap";
 
 const Wishlist = () => {
   // const data = [
@@ -56,8 +58,21 @@ const Wishlist = () => {
   //   },
   // ];
   return (
-    <div>Wishlist</div>
-  )
-}
+    <Row>
+      <Col md={6} >
 
-export default Wishlist
+      </Col>
+      <Col md={6} style={{display:"flex",justifyContent:"flex-end"}} >
+        <InputBox
+          // value={search}
+          type="text"
+          placeholder="Search whishlist here"
+          // onChange={handleInputChange}
+          // handleSubmit={handleSubmit}
+        />
+      </Col>
+    </Row>
+  );
+};
+
+export default Wishlist;

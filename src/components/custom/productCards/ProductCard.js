@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Button, Col } from "react-bootstrap";
 import "./ProductCard.css";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = (props) => {
+
+  const navigate = useNavigate()
+
   const [active, setActive] = useState("");
 
-  console.log(active);
 
   const addToWishList = () => {
     setActive("animate");
@@ -61,6 +64,7 @@ const ProductCard = (props) => {
           <Button
             className="newbtn"
             style={{ backgroundColor: "#ffc107", color: "#111" }}
+            onClick={()=>navigate(`/product-details/${props.id}`)}
           >
             Buy Now
           </Button>

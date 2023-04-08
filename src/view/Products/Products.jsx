@@ -54,6 +54,7 @@ const Products = () => {
                 image={product.image}
                 description={product.previewDescription}
                 price={product.price}
+                id={product.id}
               />
             </Col>
           );
