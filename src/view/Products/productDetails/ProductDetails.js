@@ -15,7 +15,7 @@ const ProductDetails = () => {
         <Col md={5} className="img-box">
           <img
             className="img"
-            src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/banana_cake.jpg"
+            src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/lemoncheese_cake.jpg"
             alt="cake"
           />
           <div className="min-img-box">
