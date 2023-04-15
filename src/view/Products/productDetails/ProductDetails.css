@@ -70,6 +70,7 @@
 }
 .text:has(+ .text-btn:checked) {
   -webkit-line-clamp: initial;
+  line-clamp: initial;
 }
 
 .newbtn2 {
