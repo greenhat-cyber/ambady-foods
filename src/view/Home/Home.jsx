@@ -61,16 +61,19 @@ const Home = () => {
           <MainCarousel />
         </Col>
       </Row>
-      <Row className="p-1 pt-3">
+      <Row className="p-1">
+
         <h4 className="pb-2"> Category </h4>
+      </Row>
+      <div className="p-1 pt-3 category-Carousel ">
         {categoryData.map((items, idx) => {
           return (
-            <Col xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4">
+            <div xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4"  >
               <CategoryCarousel products={items.logo} title={items.name} />
-            </Col>
+            </div>
           );
         })}
-      </Row>
+      </div>
       <Row className="p-1 mt-4 ps-4 ">
         {currentProducts.map((product, idx) => {
           return (

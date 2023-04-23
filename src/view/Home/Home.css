@@ -39,3 +39,16 @@ button.visited {
     padding-bottom: 13rem;
   }
 }
+
+.category-Carousel{
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.category-Carousel::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}

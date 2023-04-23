@@ -65,12 +65,13 @@
   content: "see more";
   text-transform: capitalize;
 }
+
 .text-btn:checked::before {
   content: "see less";
 }
+
 .text:has(+ .text-btn:checked) {
   -webkit-line-clamp: initial;
-  line-clamp: initial;
 }
 
 .newbtn2 {

@@ -47,6 +47,22 @@ export const categoryData = [
     logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/27-Donut-64.png",
     name: "Doughnut",
   },
+  {
+    logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/27-Donut-64.png",
+    name: "Doughnut",
+  },
+  {
+    logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/27-Donut-64.png",
+    name: "Doughnut",
+  },
+  {
+    logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/27-Donut-64.png",
+    name: "Doughnut",
+  },
+  {
+    logo: "https://cdn4.iconfinder.com/data/icons/fast-food-130/64/27-Donut-64.png",
+    name: "Doughnut",
+  },
 ];
 
 export const productData = [
