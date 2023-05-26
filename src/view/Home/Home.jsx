@@ -20,6 +20,7 @@ const Home = () => {
   const handleInputChange = (e) => {
     setSearch(e.target.value);
   };
+  
 
   const handleSubmit = () => {
     console.log(search);

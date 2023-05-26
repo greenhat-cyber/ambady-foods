@@ -1,23 +1,33 @@
 import Navbar from "../components/Headers/navbar/Navbar";
 import React from "react";
 import "./sidebar.css";
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 import MobNav from "../components/Headers/mob-nav/MobNav";
 import MobBottom from "../components/Headers/mob-nav/MobBottom";
 const Default = () => {
   let auth = localStorage.getItem("token");
+
+  const mainContent = React.useRef(null);
+  const location = useLocation();
+  React.useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+    mainContent.current.scrollTop = 0;
+  }, [location]);
+
   return (
     <>
       <div className="mob">
         <MobNav />
-        <MobBottom/>
+        <MobBottom />
       </div>
       <div className="box">
-        <div className="sidebar">
+        <div className="sidebar" >
           <Navbar />
         </div>
-        <div className="content">
-          {auth ? <Outlet /> : <Navigate to={"/login"} />}
+        <div className="content" ref={mainContent}>
+          <Outlet/>
+            {/* {auth ? <Outlet /> : <Navigate to={"/login"} />} */}
         </div>
       </div>
     </>

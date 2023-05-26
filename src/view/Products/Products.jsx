@@ -1,4 +1,4 @@
-import React, { Profiler, useState } from "react";
+import React, { useState } from "react";
 import "./Products.css";
 import InputBox from "../../components/custom/Input/InputBox";
 import { Col, Row } from "react-bootstrap";
@@ -21,6 +21,7 @@ const Products = () => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  
 
     // Calculate the index of the first and last item to display on the current page
     const indexOfLastItem = currentPage * itemsPerPage;

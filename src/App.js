@@ -1,12 +1,15 @@
-import React from 'react'
-import IndexRouters from './router/Index'
+import React from "react";
+import IndexRouters from "./router/Index";
+import ScrollToTop from "./components/ScrollTop";
 
 const App = () => {
   return (
     <div>
-      <IndexRouters/>
+      <ScrollToTop>
+        <IndexRouters />
+      </ScrollToTop>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

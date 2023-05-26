@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ProductDetails.css";
 import { Button, Col, Row } from "react-bootstrap";
+import ProductCard from "../../../components/custom/productCards/ProductCard";
 
 const ProductDetails = () => {
   const [active, setActive] = useState("");
@@ -11,7 +12,10 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Row style={{paddingBottom:"15rem"}} className="productDetails-container" >
+      <Row
+        style={{ paddingBottom: "15rem" }}
+        className="productDetails-container"
+      >
         <Col md={5} className="img-box">
           <img
             className="img"
@@ -44,7 +48,7 @@ const ProductDetails = () => {
             <h6>Details</h6>
           </div>
           <div className="mt-3" style={{ color: "gray" }}>
-            <p className="text p-0" >
+            <p className="text p-0">
               Carrot cake closely resembles a quick bread in method of
               preparation (all the wet ingredients, such as the eggs and sugar,
               are mixed, all the dry ingredients are mixed, and the wet are then
@@ -60,15 +64,14 @@ const ProductDetails = () => {
             <input type="checkbox" className="text-btn p-0 pb-2" />
           </div>
           <Row>
-            <Col md={6} style={{display:"flex",alignItems:"center",}} >
+            <Col md={6} style={{ display: "flex", alignItems: "center" }}>
               <h2>₹ 500 / 1kg</h2>
               <div
                 onClick={addToWishList}
                 className={`HeartAnimation ${active}`}
               ></div>
             </Col>
-            <Col md={6}>
-            </Col>
+            <Col md={6}></Col>
           </Row>
           <Row>
             <Col md={6}>
@@ -88,6 +91,13 @@ const ProductDetails = () => {
             </Col>
           </Row>
         </Col>
+        <hr className="mt-3" />
+        <Row>
+          <h5>Related Products</h5>
+          <Col className="mt-3" md={4} xs={6}>
+            <ProductCard />
+          </Col>
+        </Row>
       </Row>
     </>
   );

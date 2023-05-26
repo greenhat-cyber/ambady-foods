@@ -1,17 +1,23 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, useRef, } from "react";
 
-function ScrollToTop({ history, children }) {
+function ScrollToTop({ children }) {
+  const scrollRef = useRef(null);
+
   useEffect(() => {
-    const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
-    });
-    return () => {
-      unlisten();
+    const onUrlChange = () => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollTop = 0;
+      }
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    window.addEventListener("hashchange", onUrlChange);
+
+    return () => {
+      window.removeEventListener("hashchange", onUrlChange);
+    };
   }, []);
 
-  return <Fragment>{children}</Fragment>;
+  return <div ref={scrollRef}>{children}</div>;
 }
 
-export default (ScrollToTop);
+export default ScrollToTop;
