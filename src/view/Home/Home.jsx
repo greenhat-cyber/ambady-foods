@@ -8,6 +8,7 @@ import ProductCard from "../../components/custom/productCards/ProductCard";
 import InputBox from "../../components/custom/Input/InputBox";
 import { categoryData, productData } from "../../util/data";
 import CustomPagination from "../../components/custom/CustomPagination/CustomPagination";
+import CustomDrawer from "../../components/custom/Drawer/CustomDrawer";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -20,7 +21,6 @@ const Home = () => {
   const handleInputChange = (e) => {
     setSearch(e.target.value);
   };
-  
 
   const handleSubmit = () => {
     console.log(search);
@@ -40,7 +40,7 @@ const Home = () => {
           <h4 className="p-0 m-0">Home</h4>
         </Col>
         <Col
-        className="newInp"
+          className="newInp"
           style={{
             display: "flex",
             alignItems: "center",
@@ -48,7 +48,6 @@ const Home = () => {
           }}
         >
           <InputBox
-          
             value={search}
             type="text"
             placeholder="Search products here"
@@ -63,13 +62,12 @@ const Home = () => {
         </Col>
       </Row>
       <Row className="p-1">
-
         <h4 className="pb-2"> Category </h4>
       </Row>
       <div className="p-1 pt-3 category-Carousel ">
         {categoryData.map((items, idx) => {
           return (
-            <div xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4"  >
+            <div xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4">
               <CategoryCarousel products={items.logo} title={items.name} />
             </div>
           );
@@ -90,8 +88,14 @@ const Home = () => {
           );
         })}
       </Row>
-      <Row className="pagination-bottom" >
-        <Col style={{display:"flex",alignItems:"center",justifyContent:"center"}} >
+      <Row className="pagination-bottom">
+        <Col
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <CustomPagination
             totalItems={productData.length}
             itemsPerPage={itemsPerPage}

@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div className="sidebar shadow-sm">
       <div className="logo">
-        <h2 className="m-0 p-0">Logo</h2>
+        <h2 className="m-0 p-0">Ambady Foods</h2>
       </div>
       <div>
         {sidebarData.map((items, idx) => {
@@ -69,8 +69,8 @@ const Navbar = () => {
                         borderRadius: "8px",
                         flexDirection: "row",
                       }
-                      : {
-                      boxShadow: "0px 0px 3px 0px rgba(0, 0, 0, 0.142)",
+                    : {
+                        boxShadow: "0px 0px 3px 0px rgba(0, 0, 0, 0.142)",
                         // boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.142)",
                         display: "flex",
                         alignItems: "center",

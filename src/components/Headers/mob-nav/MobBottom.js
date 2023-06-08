@@ -4,6 +4,7 @@ import { HiMenuAlt2, HiShoppingCart } from "react-icons/hi";
 import { BsFillBoxFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import CustomDrawer from "../../custom/Drawer/CustomDrawer";
 const MobBottom = () => {
   const [active2, setActive2] = useState("");
 
@@ -34,7 +35,7 @@ const MobBottom = () => {
     },
     {
       icon: <HiMenuAlt2 />,
-      name: "home",
+      name: "Options",
       path: "",
     },
   ];
@@ -46,26 +47,34 @@ const MobBottom = () => {
     navigate(activePath);
   };
 
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+  
   return (
-    <div class="navigation">
-      <ul>
-        {data.map((items, idx) => {
-          return (
-            <li
-              onClick={() => HandleClick(items.path)}
-              key={idx}
-              className={`menu_item ${loc === items.path ? "active2" : ""}`}
-            >
-              <a>
-                <span className="icon">{items.icon}</span>
-                <span className="text">{items.name}</span>
-              </a>
-            </li>
-          );
-        })}
-        <div className="indicator"></div>
-      </ul>
-    </div>
+    <>
+    <CustomDrawer isOpen={show} setIsOpen={handleClose} />
+      <div class="navigation">
+        <ul>
+          {data.map((items, idx) => {
+            return (
+              <li
+                onClick={items.name === "Options" ? ()=> setShow(true) : () => HandleClick(items.path)  }
+                key={idx}
+                className={`menu_item ${loc === items.path ? "active2" : ""}`}
+              >
+                <a>
+                  <span className="icon">{items.icon}</span>
+                  <span className="text">{items.name}</span>
+                </a>
+              </li>
+            );
+          })}
+          <div className="indicator"></div>
+        </ul>
+      </div>
+    </>
   );
 };
 

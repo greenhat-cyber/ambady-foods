@@ -24,7 +24,7 @@ const MobNav = () => {
             paddingLeft:"1rem"
           }}
         >
-          logo
+          Ambady Foods
         </Col>
         <Col
           style={{

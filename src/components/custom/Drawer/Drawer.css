@@ -1,0 +1,12 @@
+.drawer{
+    /* width: 75%; */
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    transition: ease all .5s;
+
+}
+
+
