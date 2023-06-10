@@ -7,6 +7,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [toggle, settoggle] = useState(false);
+  const [toggle1, settoggle1] = useState("2");
   const [loc, setLoc] = useState("");
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const Navbar = () => {
       path: "/wishlist",
     },
     {
-      title: "Cart",
+      title: `Cart(${toggle1})`,
       icon: <HiShoppingCart />,
       path: "/cart",
     },

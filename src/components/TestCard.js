@@ -1,35 +1,23 @@
-import React, { useState } from "react";
-import ProductCard from "./custom/productCards/ProductCard";
-import { productData } from "../util/data";
+import React, { useState } from 'react';
 
-const ProductCarousel = ({ products }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
 
-  const handlePrevClick = () => {
-    const index = currentIndex === 0 ? products.length - 1 : currentIndex - 1;
-    setCurrentIndex(index);
-  };
+const CardSwiper = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const handleNextClick = () => {
-    const index = currentIndex === products.length - 1 ? 0 : currentIndex + 1;
-    setCurrentIndex(index);
+  const handleCardSwipe = () => {
+    // Simulated card swipe event
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    setSelectedCategory(randomCategory);
   };
 
   return (
-    <div className="product-carousel">
-      <button onClick={handlePrevClick}>Prev</button>
-      <div className="product-carousel-cards">
-        {productData.map((product, index) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            isActive={index === currentIndex}
-          />
-        ))}
-      </div>
-      <button onClick={handleNextClick}>Next</button>
+    <div>
+      <h1>Custom Category Card Swiper</h1>
+      <button onClick={handleCardSwipe}>Swipe Card</button>
+      {selectedCategory && <p>Selected Category: {selectedCategory}</p>}
     </div>
   );
 };
 
-export default ProductCarousel;
+export default CardSwiper;

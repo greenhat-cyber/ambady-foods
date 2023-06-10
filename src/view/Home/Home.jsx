@@ -37,7 +37,7 @@ const Home = () => {
     <Fragment>
       <Row className="p-1 pb-2 pt-3 ">
         <Col>
-          <h4 className="p-0 m-0">Home</h4>
+          <h4 className="p-0 m-0 ps-2">Home</h4>
         </Col>
         <Col
           className="newInp"
@@ -62,17 +62,21 @@ const Home = () => {
         </Col>
       </Row>
       <Row className="p-1">
-        <h4 className="pb-2"> Category </h4>
+        <h4 className="pb-2 m-0 p-0 ps-3 mt-3"> Category </h4>
       </Row>
-      <div className="p-1 pt-3 category-Carousel ">
+
+      <CategoryCarousel products={categoryData} />
+
+      {/* <CategoryCarousel products={categoryData} />
         {categoryData.map((items, idx) => {
           return (
             <div xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4">
+              <CategoryCarousel products={categoryData} />
               <CategoryCarousel products={items.logo} title={items.name} />
             </div>
           );
-        })}
-      </div>
+        })} */}
+
       <Row className="p-1 mt-4 ps-4 ">
         {currentProducts.map((product, idx) => {
           return (
