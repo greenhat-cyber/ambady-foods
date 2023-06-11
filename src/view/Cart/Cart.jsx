@@ -158,10 +158,393 @@ const Cart = () => {
 
       {/* mobile cart */}
 
-      <section>
-        <div className="cart-item-mob">
-          
-        </div>
+      <section style={{ overflowY: "scroll" }}>
+        <Row className="mt-1 mb-1">
+          <Col>
+            <div className="cart-item-mob">
+              <Row className="m-0 p-0">
+                <Col style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    style={{ width: "100px", borderRadius: "10px" }}
+                    src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
+                    alt="not found"
+                  />
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0 p-0">sdccedsdds</p>
+                  <p
+                    className="p-0 m-0"
+                    style={{ color: "#ff0000", fontSize: "15px" }}
+                  >
+                    Out of Stock
+                  </p>
+                  {/* <p className="p-0 m-0" style={{ color: "#40ff00" }}>In Stock</p> */}
+                  <p className="m-0 p-0">₹ 500</p>
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                      flexDirection: "column",
+                      width: "100%",
+                      // justifyContent:"flex-end"
+                    }}
+                  >
+                    <RxCross2
+                      style={{ cursor: "pointer", marginRight: ".3rem" }}
+                    />
+                  </div>
+                  <div className="qty-btn-mob">
+                    <button>
+                      <BiPlus />
+                    </button>
+                    <p className="p-0 m-0">0</p>
+                    <button>
+                      <BiMinus />
+                    </button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row className="mt-1 mb-1">
+          <Col>
+            <div className="cart-item-mob">
+              <Row className="m-0 p-0">
+                <Col style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    style={{ width: "100px", borderRadius: "10px" }}
+                    src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
+                    alt="not found"
+                  />
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0 p-0">sdccedsdds</p>
+                  <p
+                    className="p-0 m-0"
+                    style={{ color: "#ff0000", fontSize: "15px" }}
+                  >
+                    Out of Stock
+                  </p>
+                  {/* <p className="p-0 m-0" style={{ color: "#40ff00" }}>In Stock</p> */}
+                  <p className="m-0 p-0">₹ 500</p>
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                      flexDirection: "column",
+                      width: "100%",
+                      // justifyContent:"flex-end"
+                    }}
+                  >
+                    <RxCross2
+                      style={{ cursor: "pointer", marginRight: ".3rem" }}
+                    />
+                  </div>
+                  <div className="qty-btn-mob">
+                    <button>
+                      <BiPlus />
+                    </button>
+                    <p className="p-0 m-0">0</p>
+                    <button>
+                      <BiMinus />
+                    </button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row className="mt-1 mb-1">
+          <Col>
+            <div className="cart-item-mob">
+              <Row className="m-0 p-0">
+                <Col style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    style={{ width: "100px", borderRadius: "10px" }}
+                    src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
+                    alt="not found"
+                  />
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0 p-0">sdccedsdds</p>
+                  <p
+                    className="p-0 m-0"
+                    style={{ color: "#ff0000", fontSize: "15px" }}
+                  >
+                    Out of Stock
+                  </p>
+                  {/* <p className="p-0 m-0" style={{ color: "#40ff00" }}>In Stock</p> */}
+                  <p className="m-0 p-0">₹ 500</p>
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                      flexDirection: "column",
+                      width: "100%",
+                      // justifyContent:"flex-end"
+                    }}
+                  >
+                    <RxCross2
+                      style={{ cursor: "pointer", marginRight: ".3rem" }}
+                    />
+                  </div>
+                  <div className="qty-btn-mob">
+                    <button>
+                      <BiPlus />
+                    </button>
+                    <p className="p-0 m-0">0</p>
+                    <button>
+                      <BiMinus />
+                    </button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row className="mt-1 mb-1">
+          <Col>
+            <div className="cart-item-mob">
+              <Row className="m-0 p-0">
+                <Col style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    style={{ width: "100px", borderRadius: "10px" }}
+                    src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
+                    alt="not found"
+                  />
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0 p-0">sdccedsdds</p>
+                  <p
+                    className="p-0 m-0"
+                    style={{ color: "#ff0000", fontSize: "15px" }}
+                  >
+                    Out of Stock
+                  </p>
+                  {/* <p className="p-0 m-0" style={{ color: "#40ff00" }}>In Stock</p> */}
+                  <p className="m-0 p-0">₹ 500</p>
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                      flexDirection: "column",
+                      width: "100%",
+                      // justifyContent:"flex-end"
+                    }}
+                  >
+                    <RxCross2
+                      style={{ cursor: "pointer", marginRight: ".3rem" }}
+                    />
+                  </div>
+                  <div className="qty-btn-mob">
+                    <button>
+                      <BiPlus />
+                    </button>
+                    <p className="p-0 m-0">0</p>
+                    <button>
+                      <BiMinus />
+                    </button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row className="mt-1 mb-1">
+          <Col>
+            <div className="cart-item-mob">
+              <Row className="m-0 p-0">
+                <Col style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    style={{ width: "100px", borderRadius: "10px" }}
+                    src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
+                    alt="not found"
+                  />
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0 p-0">sdccedsdds</p>
+                  <p
+                    className="p-0 m-0"
+                    style={{ color: "#ff0000", fontSize: "15px" }}
+                  >
+                    Out of Stock
+                  </p>
+                  {/* <p className="p-0 m-0" style={{ color: "#40ff00" }}>In Stock</p> */}
+                  <p className="m-0 p-0">₹ 500</p>
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                      flexDirection: "column",
+                      width: "100%",
+                      // justifyContent:"flex-end"
+                    }}
+                  >
+                    <RxCross2
+                      style={{ cursor: "pointer", marginRight: ".3rem" }}
+                    />
+                  </div>
+                  <div className="qty-btn-mob">
+                    <button>
+                      <BiPlus />
+                    </button>
+                    <p className="p-0 m-0">0</p>
+                    <button>
+                      <BiMinus />
+                    </button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row className="mt-1 mb-1">
+          <Col>
+            <div className="cart-item-mob">
+              <Row className="m-0 p-0">
+                <Col style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    style={{ width: "100px", borderRadius: "10px" }}
+                    src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
+                    alt="not found"
+                  />
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0 p-0">sdccedsdds</p>
+                  <p
+                    className="p-0 m-0"
+                    style={{ color: "#ff0000", fontSize: "15px" }}
+                  >
+                    Out of Stock
+                  </p>
+                  {/* <p className="p-0 m-0" style={{ color: "#40ff00" }}>In Stock</p> */}
+                  <p className="m-0 p-0">₹ 500</p>
+                </Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                      flexDirection: "column",
+                      width: "100%",
+                      // justifyContent:"flex-end"
+                    }}
+                  >
+                    <RxCross2
+                      style={{ cursor: "pointer", marginRight: ".3rem" }}
+                    />
+                  </div>
+                  <div className="qty-btn-mob">
+                    <button>
+                      <BiPlus />
+                    </button>
+                    <p className="p-0 m-0">0</p>
+                    <button>
+                      <BiMinus />
+                    </button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+
+        {/* place order card */}
+
+        <Row className="m-0 p-0 fixed-bottom" >
+          <Col className="m-2 p-0"  >
+            <div className="place-order-card"></div>
+          </Col>
+        </Row>
       </section>
     </>
   );
