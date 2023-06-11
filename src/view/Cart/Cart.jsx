@@ -158,7 +158,7 @@ const Cart = () => {
 
       {/* mobile cart */}
 
-      <section style={{ overflowY: "scroll" }}>
+      <section className="mob-cart" style={{ overflowY: "scroll" }}>
         <Row className="mt-1 mb-1">
           <Col>
             <div className="cart-item-mob">
