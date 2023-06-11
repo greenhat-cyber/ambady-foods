@@ -32,7 +32,7 @@ const Cart = () => {
         </Row>
         <section className="cart-lg-screen">
           <Row className="p-1 ps-4 pt-3">
-            <Col md={7} className="table-scroll">
+            <Col md={8} className="table-scroll">
               <Table responsive onScroll={true}>
                 <thead>
                   <tr>
@@ -72,10 +72,16 @@ const Cart = () => {
                           padding: "1.3rem",
                         }}
                       >
-                        {/* <p className="p-0 m-0" style={{color:"#ff0000"}} >Out of Stock</p> */}
+                        {/* <p
+                          className="p-0 m-0"
+                          style={{ color: "#ff0000", fontSize: "15px" }}
+                        >
+                          Out of Stock
+                        </p> */}
                         <p className="p-0 m-0" style={{ color: "#40ff00" }}>
                           In Stock
                         </p>
+    
                         {/* <Badge bg="success">In Stock</Badge> */}
                         {/* <Badge bg="danger">Out of Stock</Badge> */}
                       </div>
@@ -116,7 +122,7 @@ const Cart = () => {
                 </tbody>
               </Table>
             </Col>
-            <Col md={5}>
+            <Col md={4}>
               <div className="total-price-body">
                 <p className="p-2 m-0 mt-5 pt-3">PRICE DETAILS</p>
                 <hr />
@@ -540,8 +546,8 @@ const Cart = () => {
 
         {/* place order card */}
 
-        <Row className="m-0 p-0 fixed-bottom" >
-          <Col className="m-2 p-0"  >
+        <Row className="m-0 p-0 fixed-bottom">
+          <Col className="m-2 p-0">
             <div className="place-order-card"></div>
           </Col>
         </Row>
