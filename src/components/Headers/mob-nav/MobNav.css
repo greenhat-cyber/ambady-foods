@@ -16,7 +16,7 @@
   background-color: #f0e5d1;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 5000;
   padding: 0;
 }
 
@@ -29,7 +29,7 @@
   /* background-color: #ffd145; */
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 5000;
   padding: 0;
 }
 
@@ -45,7 +45,7 @@
   justify-content: center;
   border-radius: 20px 20px 0 0;
   background-color: #f0e5d1;
-  z-index: 101;
+  z-index: 5000;
 }
 
 .navigation ul {
