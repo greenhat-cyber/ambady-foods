@@ -42,7 +42,7 @@ const CategoryCarousel = (props) => {
           // when window width is >= 768px
           414: {
             width: 414,
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
           // when window width is >= 768px
           660: {
@@ -53,13 +53,13 @@ const CategoryCarousel = (props) => {
           // when window width is >= 768px
           768: {
             width: 768,
-            slidesPerView: 6,
+            slidesPerView: 4,
           },
 
           // when window width is >= 768px
           991: {
             width: 991,
-            slidesPerView: 8,
+            slidesPerView: 4,
           },
 
           // when window width is >= 768px

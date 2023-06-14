@@ -212,11 +212,15 @@ const Cart = () => {
         >
           {cartItem.map((items, idx) => {
             return (
-              <Row className="mt-1 mb-1" key={idx} >
+              <Row className="mt-1 mb-1" key={idx}>
                 <Col>
                   <div className="cart-item-mob">
                     <Row className="m-0 p-0">
-                      <Col style={{ display: "flex", alignItems: "center" }}>
+                      <Col style={{ 
+                        display: "flex", 
+                        alignItems: "center",
+                        width:"50%"
+                        }}>
                         <img
                           style={{ width: "100px", borderRadius: "10px" }}
                           src={items.image}
@@ -229,16 +233,17 @@ const Cart = () => {
                           alignItems: "flex-start",
                           flexDirection: "column",
                           justifyContent: "center",
+                          width:"30%"
                         }}
                       >
                         <p className="m-0 p-0">{items.name}</p>
                         {items.stock ? (
-                          <p className="p-0 m-0" style={{ color: "#40ff00" }}>
+                          <p className="p-0 m-0 me-4" style={{ color: "#40ff00" }}>
                             In Stock
                           </p>
                         ) : (
                           <p
-                            className="p-0 m-0"
+                            className="p-0 m-0 "
                             style={{ color: "#ff0000", fontSize: "15px" }}
                           >
                             Out of Stock
@@ -250,16 +255,17 @@ const Cart = () => {
                       <Col
                         style={{
                           display: "flex",
-                          alignItems: "center",
+                          alignItems: "flex-end",
                           flexDirection: "column",
+                          width:"100%"
                         }}
-                      >
+                        >
                         <div
                           style={{
                             display: "flex",
                             alignItems: "flex-end",
                             flexDirection: "column",
-                            width: "100%",
+                            width:"100%"
                             // justifyContent:"flex-end"
                           }}
                         >
@@ -287,37 +293,47 @@ const Cart = () => {
 
         {/* place order card */}
 
-        <Row className="m-0 p-0 fixed-bottom">
+        <Row className="m-0 p-0 fixed-bottom" style={{zIndex:"1"}}>
           <Col className="m-2 p-0">
             <div className="place-order-card">
-            <p className="p-2 m-0 mt-5 pt-3">PRICE DETAILS</p>
-                <hr />
-                <Row className="p-1">
-                  <Col>Price (9 items)</Col>
-                  <Col className="text-end">₹ 5555</Col>
-                </Row>
-                <Row className="p-1">
-                  <Col>Delivery Charges</Col>
-                  <Col className="text-end text-success">Free</Col>
-                </Row>
-                <hr />
-                <Row className="p-1">
-                  <Col>Total Amount</Col>
-                  <Col className="text-end">₹ 5554845</Col>
-                </Row>
-                <hr />
-                <Row className="p-1">
+              <div
+                className="p-2 m-0 mt-5 pt-3"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p className="p-0 m-0">PRICE DETAILS</p>
+                <button className="order-btn-mob">Place Order</button>
+              </div>
+              <hr />
+              <Row className="p-1">
+                <Col>Price (9 items)</Col>
+                <Col className="text-end">₹ 5555</Col>
+              </Row>
+              <Row className="p-1">
+                <Col>Delivery Charges</Col>
+                <Col className="text-end text-success">Free</Col>
+              </Row>
+              <hr />
+              <Row className="p-1">
+                <Col>Total Amount</Col>
+                <Col className="text-end">₹ 5554845</Col>
+              </Row>
+              {/* <hr /> */}
+              {/* <Row className="p-1">
                   <Col
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center",
+                      justifyContent: "flex-start",
                     }}
                   >
                     <button className="order-btn">Place Order</button>
                   </Col>
-                </Row>
-                <hr />
+                </Row> */}
+              <hr />
             </div>
           </Col>
         </Row>

@@ -77,11 +77,22 @@
     outline: solid 1px #ffc107;
     border: unset;
     background-color: #ffc107;
-
-
 }
 
+.order-btn-mob {
+    width: 30%;
+    height: 2.3rem;
+    border-radius: 10px;
+    outline: solid 1px #ffc107;
+    border: unset;
+    background-color: #ffc107;
+}
+
+
 .order-btn:active {
+    background-color: #ecb100;
+}
+.order-btn-mob:active {
     background-color: #ecb100;
 }
 
