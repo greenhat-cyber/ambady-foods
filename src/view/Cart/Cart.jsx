@@ -161,7 +161,7 @@ const Cart = () => {
             </Col>
             <Col md={4}>
               <div className="total-price-body">
-                <p className="p-2 m-0 mt-5 pt-3">PRICE DETAILS</p>
+                <p className="p-2 m-0 mt-3 pt-3">PRICE DETAILS</p>
                 <hr />
                 <Row className="p-3">
                   <Col>Price (9 items)</Col>

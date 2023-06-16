@@ -67,16 +67,6 @@ const Home = () => {
 
       <CategoryCarousel products={categoryData} />
 
-      {/* <CategoryCarousel products={categoryData} />
-        {categoryData.map((items, idx) => {
-          return (
-            <div xs={4} md={1} sm={3} xl={1} key={idx} className="pt-2 ps-4">
-              <CategoryCarousel products={categoryData} />
-              <CategoryCarousel products={items.logo} title={items.name} />
-            </div>
-          );
-        })} */}
-
       <Row className="p-1 mt-4 ps-4 ">
         {currentProducts.map((product, idx) => {
           return (

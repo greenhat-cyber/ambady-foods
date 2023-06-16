@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./MobNav.css";
-import { Col, Row } from "react-bootstrap";
+import { Col, Dropdown, Row } from "react-bootstrap";
 import InputBox from "../../custom/Input/InputBox";
+import { BiLogOutCircle } from "react-icons/bi";
+import { BsFillGearFill } from "react-icons/bs";
 
 const MobNav = () => {
   const [search, setSearch] = useState("");
@@ -12,6 +14,19 @@ const MobNav = () => {
   const handleSubmit = () => {
     console.log(search);
   };
+
+  const proData = [
+    {
+      title: "Settings",
+      icon: <BsFillGearFill />,
+      path: "/settings",
+    },
+    {
+      title: "Log Out",
+      icon: <BiLogOutCircle />,
+      path: "/wishlist",
+    },
+  ];
   return (
     <>
       <div className="mob-fake">ssdf</div>
@@ -21,7 +36,7 @@ const MobNav = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "flex-start",
-            paddingLeft:"1rem"
+            paddingLeft: "1rem",
           }}
         >
           Ambady Foods
@@ -31,16 +46,37 @@ const MobNav = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "flex-end",
-            paddingRight:"1rem"
+            paddingRight: "1rem",
           }}
         >
-          <InputBox
+          <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic">
+              <img
+                className="userProfile"
+                alt="neha"
+                src="https://images.pexels.com/photos/2859616/pexels-photo-2859616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              {proData.map((items, idx) => {
+                return (
+                  <Dropdown.Item href={items.path} style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"1rem"}}>
+                    <i className="p-0 m-0 fs-5">{items.icon}</i>
+                    <p className="p=0 m-0 mt-1 ">{items.title}</p>
+                  </Dropdown.Item>
+                );
+              })}
+            </Dropdown.Menu>
+          </Dropdown>
+
+          {/* <InputBox
             value={search}
             type="text"
             placeholder="Search products here"
             onChange={handleInputChange}
             handleSubmit={handleSubmit}
-          />
+          /> */}
         </Col>
       </div>
     </>

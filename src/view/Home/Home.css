@@ -30,11 +30,11 @@ button.visited {
 
 
 @media only screen and (max-width: 992px) {
-  .newInp {
+  /* .newInp {
       display: none !important;
 
 
-  }
+  } */
   .pagination-bottom{
     padding-bottom: 13rem;
   }
