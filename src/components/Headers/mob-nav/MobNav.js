@@ -24,7 +24,7 @@ const MobNav = () => {
     {
       title: "Log Out",
       icon: <BiLogOutCircle />,
-      path: "/wishlist",
+      path: "",
     },
   ];
   return (
@@ -50,7 +50,7 @@ const MobNav = () => {
           }}
         >
           <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic">
+            <Dropdown.Toggle className="btn-primaryNew" id="dropdown-basic">
               <img
                 className="userProfile"
                 alt="neha"
@@ -58,7 +58,7 @@ const MobNav = () => {
               />
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu className="dropdown-menuNew">
               {proData.map((items, idx) => {
                 return (
                   <Dropdown.Item href={items.path} style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"1rem"}}>
