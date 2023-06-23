@@ -4,7 +4,9 @@ import "./Navbar.css";
 import { AiFillHome, AiFillHeart } from "react-icons/ai";
 import { BsBoxFill, BsFillGearFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { BiLogOutCircle } from "react-icons/bi";
+import { Dropdown } from "react-bootstrap";
 const Navbar = () => {
   const [toggle, settoggle] = useState(false);
   const [toggle1, settoggle1] = useState("2");
@@ -15,6 +17,8 @@ const Navbar = () => {
     setLoc(path);
     settoggle(false);
   }, [toggle]);
+
+  const navigate = useNavigate()
 
   const sidebarData = [
     {
@@ -41,6 +45,19 @@ const Navbar = () => {
       title: "Settings",
       icon: <BsFillGearFill />,
       path: "/settings",
+    },
+  ];
+
+  const proData = [
+    {
+      title: "Settings",
+      icon: <BsFillGearFill />,
+      path: "/settings",
+    },
+    {
+      title: "Log Out",
+      icon: <BiLogOutCircle />,
+      path: "/login",
     },
   ];
 
@@ -95,6 +112,39 @@ const Navbar = () => {
             </NavLink>
           );
         })}
+      </div>
+        <hr style={{position:"relative",top:"17rem"}}/>
+      <div className="profil_bottom" style={{display:"flex",alignItems:"center",justifyContent:"flex-start",gap:"1rem"}}>
+        <Dropdown>
+          <Dropdown.Toggle className="btn-primaryNew" id="dropdown-basic">
+            <img
+              className="userProfile"
+              alt="neha"
+              src="https://images.pexels.com/photos/2859616/pexels-photo-2859616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            />
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className="dropdown-menuNew">
+            {proData.map((items, idx) => {
+              return (
+                <Dropdown.Item
+                onClick={()=>navigate(`${items.path}`)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "1rem",
+                  }}
+                >
+                  <i className="p-0 m-0 ">{items.icon}</i>
+                  <p className="p=0 m-0 mt-1 ">{items.title}</p>
+                </Dropdown.Item>
+              );
+            })}
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <p className="m-0 p-0">Hi,Vishal</p>
       </div>
     </div>
   );

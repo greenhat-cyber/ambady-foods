@@ -29,7 +29,7 @@ const MobNav = () => {
   ];
   return (
     <>
-      <div className="mob-fake">ssdf</div>
+      <div className="mob-fake"></div>
       <div className="mob-nav">
         <Col
           style={{
@@ -61,8 +61,8 @@ const MobNav = () => {
             <Dropdown.Menu className="dropdown-menuNew">
               {proData.map((items, idx) => {
                 return (
-                  <Dropdown.Item href={items.path} style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"1rem"}}>
-                    <i className="p-0 m-0 fs-5">{items.icon}</i>
+                  <Dropdown.Item href={items.path} style={{display:"flex",alignItems:"center",justifyContent:"flex-start",gap:"1rem"}}>
+                    <i className="p-0 m-0">{items.icon}</i>
                     <p className="p=0 m-0 mt-1 ">{items.title}</p>
                   </Dropdown.Item>
                 );

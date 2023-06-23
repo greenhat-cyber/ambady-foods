@@ -5,22 +5,23 @@
   align-items: center;
   justify-content: center;
 }
+
 .right-bg {
-  background: #f7971e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #ffd200,
-    #f7971e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #ffd200,
-    #f7971e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f7971e;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #ffd200,
+      #f7971e);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #ffd200,
+      #f7971e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
   display: flex;
   justify-content: center;
 }
+
 .login-body2 {
   height: 30vh;
   display: flex;
@@ -28,19 +29,21 @@
   align-items: center;
   justify-content: center;
 }
-.login-body {
-  height: 30vh;
+
+.login {
+  margin-top: 8rem !important;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  height: 100vh;
+  gap: 2.5rem;
+  /* background-color: #fff; */
+  /* box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.101);
+  border-radius: 10px;
+  border: solid 1px rgba(128, 128, 128, 0.093); */
 }
 
-.login-form {
-  border-radius: 50px !important;
-  outline-style: none !important;
-  border-color: #c3c3c3 !important;
-}
 
 .form-control:focus {
   border-color: #c3c3c3 !important;
@@ -67,7 +70,7 @@ button.visited {
   outline: 0 !important;
 }
 
-.box{
+.box {
   width: 100%;
 }
 
@@ -75,8 +78,25 @@ button.visited {
 /* media Query */
 
 @media only screen and (max-width:992px) {
-  .right-bg{
-      display: none;
+  .right-bg {
+    display: none;
   }
-  
+
+}
+
+.auth-btn {
+  background-color: #ffd200;
+  color: #111;
+  width: 130px;
+  height: 2rem;
+  border-radius: 10px;
+  outline: unset;
+  border: unset;
+  margin-top: 1rem;
+
+}
+
+.auth-btn:active {
+  background-color: #ecc000;
+
 }

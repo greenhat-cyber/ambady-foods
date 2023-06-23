@@ -3,6 +3,8 @@
 }
 
 .sidebar {
+  /* background-color: #111 !important;
+  color: #fff !important; */
   position: fixed;
   top: 0;
   left: 0;
@@ -10,10 +12,11 @@
   width: 255px;
 }
 
+
 .content {
-  background-color: #fff;
+  /* background-color: #fff;
+  color: #111; */
   height: 100vh;
-  color: #111;
   flex: 1;
   overflow-y: auto;
   margin-left: 255px;

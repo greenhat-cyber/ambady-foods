@@ -9,6 +9,7 @@ import { BsFacebook } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import Welcome from "../../../components/custom/welcome/Welcome";
 import { NavLink, useNavigate } from "react-router-dom";
+import AuthInput from "../../../components/custom/Input/AuthInput";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -23,78 +24,78 @@ const Login = () => {
 
     navigate("/");
   };
-  return (
-    <div className="box row">
 
+  const data = [
+    {
+      title: "Email",
+      placeholder: "Email",
+      // value: email,
+
+      // handleInputChange1: handleInputChange,
+    },
+    {
+      title: "Password",
+      placeholder: "Password",
+      // value: password,
+      // type:hide,
+      backgroundColor: "red",
+      // handleInputChange1: handleInputChange2,
+    },
+  ];
+
+  return (
+    <>
+      <Row className="m-0 p-0">
         <Col sm={12} md={6} className="right-bg">
           <Welcome />
         </Col>
-        <Col sm={12} md={6}>
-          <div className="text-center login-icons  mt-5 mb-5">
-            <h2>Sign In</h2>
-          </div>
+        <Col md={6} sm={12} xs={12}>
           <div
-            className="text-center login-icons text-warning mt-5 mb-5"
             style={{
               display: "flex",
-              gap: "2rem",
               alignItems: "center",
               justifyContent: "center",
+              marginTop: "5rem",
             }}
           >
-            <AiFillGoogleCircle size={60} />
-            <BsFacebook size={50} />
-            <SiGmail size={50} />
+            <h1 className="fw-bold fs-4 m-0 p-0">Log In</h1>
           </div>
-          <div
-            style={{ width: "100%", display: "flex", placeContent: "center" }}
-          >
-            <Form style={{ width: "60%" }}>
-              <Form.Label>
-                Email <span style={{ color: "red" }}>*</span>
-              </Form.Label>
-              <Form.Control
-                className="login-form mb-4 p-2 ps-3"
-                placeholder="Enter email"
-              ></Form.Control>
-              <Form.Label>
-                Password <span style={{ color: "red" }}>*</span>
-              </Form.Label>
-              <Form.Control
-                className="login-form mb-5 p-2 ps-3 "
-                placeholder="Enter password"
-              ></Form.Control>
-            </Form>
-          </div>
-          <div style={{ display: "flex", placeContent: "center" }}>
-            <Button
-             
-              onClick={(e) => handleLogin(e)}
-              className="pe-5 ps-5 btn-warning"
+          <div className="login">
+            {data.map((item, idx) => {
+              return (
+                <AuthInput
+                  key={idx}
+                  value={item.value}
+                  // onChange={item.handleInputChange1}
+                  title={item.title}
+                  type={item.type}
+                />
+              );
+            })}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                gap: "1.5rem",
+              }}
             >
-              Sign In
-            </Button>
-          </div>
-          <div
-            className="mt-5"
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              placeContent: "center",
-            }}
-          >
-            <p>don't have an account?</p>
-            <NavLink
-              to="/registration"
-              className="text-warning fw-bold ps-2"
-              style={{ textDecoration: "none" }}
-            >
-              sign up
-            </NavLink>
+              <button className="auth-btn">Log In</button>
+              <p>
+                don't have an account?{" "}
+                <span
+                  onClick={() => navigate("/registration")}
+                  style={{ color: "#f7971e", cursor: "pointer" }}
+                >
+                  sign up
+                </span>{" "}
+              </p>
+            </div>
           </div>
         </Col>
-      
-    </div>
+      </Row>
+    </>
   );
 };
 

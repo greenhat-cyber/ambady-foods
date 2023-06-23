@@ -14,7 +14,12 @@ ul li {
   text-decoration: none;
 }
 
-
+.profil_bottom{
+  width: 16.6%;
+  position: fixed;
+  bottom: 0;
+  /* background-color: #ffc107; */
+}
 
 
 
