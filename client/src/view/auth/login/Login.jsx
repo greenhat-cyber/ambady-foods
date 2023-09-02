@@ -58,7 +58,7 @@ const Login = () => {
               marginTop: "5rem",
             }}
           >
-            <h1 className="fw-bold fs-4 m-0 p-0">Log In</h1>
+            <h1 className="fw-bold fs-4 m-0 p-0">Sign In</h1>
           </div>
           <div className="login">
             {data.map((item, idx) => {
@@ -81,7 +81,7 @@ const Login = () => {
                 gap: "1.5rem",
               }}
             >
-              <button className="auth-btn">Log In</button>
+              <button className="auth-btn">Sign In</button>
               <p>
                 don't have an account?{" "}
                 <span

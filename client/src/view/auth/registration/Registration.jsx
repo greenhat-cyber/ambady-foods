@@ -162,7 +162,7 @@ const Login = () => {
           >
             <h1 className="fw-bold fs-4 m-0 p-0">Create a new account</h1>
           </div>
-          <div className="login" style={{gap:"1rem"}}>
+          <div className="login" style={{ gap: "1rem" }}>
             {data.map((item, idx) => {
               return (
                 <AuthInput
@@ -183,7 +183,7 @@ const Login = () => {
                 gap: "1.5rem",
               }}
             >
-              <button className="auth-btn">Log In</button>
+              <button className="auth-btn">Sign Up</button>
               <p>
                 don't have an account?{" "}
                 <span

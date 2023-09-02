@@ -32,14 +32,6 @@ ul li {
   justify-content: center;
 }
 
-.active {
-  background-color: #ffc107;
-  /* border: solid .8px #ffc107; */
-  /* border-left: 4px solid #ffc107; */
-  transition: ease-in 0.3s;
-  transform: scale(1.1);
-  box-shadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.142)";
-}
 /* .nonActive {
   background-color: #fff;
   box-shadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.142)";

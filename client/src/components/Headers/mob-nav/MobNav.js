@@ -4,6 +4,7 @@ import { Col, Dropdown, Row } from "react-bootstrap";
 import InputBox from "../../custom/Input/InputBox";
 import { BiLogOutCircle } from "react-icons/bi";
 import { BsFillGearFill } from "react-icons/bs";
+import { NavLink, useLocation } from "react-router-dom";
 
 const MobNav = () => {
   const [search, setSearch] = useState("");
@@ -14,6 +15,31 @@ const MobNav = () => {
   const handleSubmit = () => {
     console.log(search);
   };
+
+  const loc = useLocation()
+
+  const navData = [
+    {
+      title: "Home",
+      // icon: <AiFillHome />,
+      path: "/",
+    },
+    {
+      title: "Products",
+      // icon: <BsBoxFill />,
+      path: "/products",
+    },
+    {
+      title: "Wishlist",
+      // icon: <AiFillHeart />,
+      path: "/wishlist",
+    },
+    {
+      title: `Cart(0)`,
+      // icon: <HiShoppingCart />,
+      path: "/cart",
+    },
+  ];
 
   const proData = [
     {
@@ -45,6 +71,44 @@ const MobNav = () => {
           style={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
+            listStyle: "none",
+            gap: "4rem"
+          }}
+        >
+          {
+            navData.map((items, idx) => {
+              return (
+
+                <NavLink
+                  key={idx}
+                  to={items.path}
+                  style={{ textDecoration: "none", color: "black",transition:"ease-in 0.5s" }}
+                >
+                  <ul
+                    className={`${loc.pathname === items.path ? "activeLi" : ""} p-0 m-3 `}
+
+                  >
+                    <li
+                      className="p-2 m-0"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <p className="p=0 m-0 mt-1 ">{items.title}</p>
+                    </li>
+                  </ul>
+                </NavLink>
+              )
+            })
+          }
+        </Col>
+        <Col
+          style={{
+            display: "flex",
+            alignItems: "center",
             justifyContent: "flex-end",
             paddingRight: "1rem",
           }}
@@ -61,7 +125,7 @@ const MobNav = () => {
             <Dropdown.Menu className="dropdown-menuNew">
               {proData.map((items, idx) => {
                 return (
-                  <Dropdown.Item href={items.path} style={{display:"flex",alignItems:"center",justifyContent:"flex-start",gap:"1rem"}}>
+                  <Dropdown.Item href={items.path} style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", gap: "1rem" }}>
                     <i className="p-0 m-0">{items.icon}</i>
                     <p className="p=0 m-0 mt-1 ">{items.title}</p>
                   </Dropdown.Item>

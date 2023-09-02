@@ -19,8 +19,8 @@
   height: 100vh;
   flex: 1;
   overflow-y: auto;
-  margin-left: 255px;
-  padding: 20px;
+  /* margin-left: 255px;
+  padding: 20px; */
 }
 
 body {

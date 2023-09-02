@@ -5,7 +5,7 @@ import { AiFillHome, AiFillHeart } from "react-icons/ai";
 import { BsBoxFill, BsFillGearFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import { NavLink, useNavigate } from "react-router-dom";
-import { BiLogOutCircle } from "react-icons/bi";
+import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 import { Dropdown } from "react-bootstrap";
 const Navbar = () => {
   const [toggle, settoggle] = useState(false);
@@ -18,7 +18,9 @@ const Navbar = () => {
     settoggle(false);
   }, [toggle]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const auth = true;
 
   const sidebarData = [
     {
@@ -55,10 +57,15 @@ const Navbar = () => {
       path: "/settings",
     },
     {
-      title: "Log Out",
-      icon: <BiLogOutCircle />,
-      path: "/login",
+      title: `${auth ? "Log In" : "Log Out"} `,
+      icon: auth ? <BiLogInCircle /> : <BiLogOutCircle />,
+      path: `${auth ? "/login" : ""} `,
     },
+    // {
+    //   title: "Log Out",
+    //   icon: <BiLogOutCircle />,
+    //   path: "/login",
+    // },
   ];
 
   return (
@@ -113,13 +120,21 @@ const Navbar = () => {
           );
         })}
       </div>
-        <hr style={{position:"relative",top:"17rem"}}/>
-      <div className="profil_bottom" style={{display:"flex",alignItems:"center",justifyContent:"flex-start",gap:"1rem"}}>
+      <hr style={{ position: "relative", top: "17rem" }} />
+      <div
+        className="profil_bottom"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          gap: "1rem",
+        }}
+      >
         <Dropdown>
           <Dropdown.Toggle className="btn-primaryNew" id="dropdown-basic">
             <img
               className="userProfile"
-              alt="neha"
+              alt="userName"
               src="https://images.pexels.com/photos/2859616/pexels-photo-2859616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             />
           </Dropdown.Toggle>
@@ -128,7 +143,7 @@ const Navbar = () => {
             {proData.map((items, idx) => {
               return (
                 <Dropdown.Item
-                onClick={()=>navigate(`${items.path}`)}
+                  onClick={() => navigate(`${items.path}`)}
                   style={{
                     display: "flex",
                     alignItems: "center",

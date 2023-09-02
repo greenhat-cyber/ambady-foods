@@ -17,17 +17,17 @@ const Default = () => {
 
   return (
     <>
+      <MobNav />
       <div className="mob">
-        <MobNav />
         <MobBottom />
       </div>
       <div className="box">
-        <div className="sidebar" >
+        {/* <div className="sidebar" >
           <Navbar />
-        </div>
-        <div className="content" ref={mainContent}>
-          <Outlet/>
-            {/* {auth ? <Outlet /> : <Navigate to={"/login"} />} */}
+        </div> */}
+        <div className="content p-3" ref={mainContent}>
+          <Outlet />
+          {/* {auth ? <Outlet /> : <Navigate to={"/login"} />} */}
         </div>
       </div>
     </>

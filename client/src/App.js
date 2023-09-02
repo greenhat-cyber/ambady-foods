@@ -7,9 +7,9 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <ScrollToTop>
+      {/* <ScrollToTop> */}
         <IndexRouters />
-      </ScrollToTop>
+      {/* </ScrollToTop> */}
     </>
   );
 };
