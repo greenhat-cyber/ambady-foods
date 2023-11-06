@@ -206,10 +206,7 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .mob-nav {
-    display: none !important;
-  }
-  .mob-fake {
+  .navLists {
     display: none !important;
   }
 }

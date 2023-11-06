@@ -71,6 +71,7 @@ const NavBar = () => {
           Ambady Foods
         </Col>
         <Col
+         className="navLists"
           style={{
             display: "flex",
             alignItems: "center",
