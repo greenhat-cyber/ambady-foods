@@ -1,0 +1,28 @@
+
+
+.pagination a {
+  /* background-color: #ffca2c !important; */
+  color: #ffca2c !important;
+  background-color: white !important;
+  border-color: white !important;
+  border-radius: 100% !important;
+}
+
+.pagination a:hover {
+    color: #ffca2c !important;
+    /* background-color: #ffca2c !important; */
+    border-color: #ffca2c !important;
+}
+.page-item .active {
+    color: #ffca2c !important;
+    border-radius: 100% !important;
+    background-color: #ffca2c !important;
+  }
+
+
+  span.page-link{
+    background-color: #ffca2c !important;
+    border-color: unset !important;
+    border-radius: 100% !important;
+  }
+

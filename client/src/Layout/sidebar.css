@@ -1,0 +1,48 @@
+.box {
+  display: flex;
+}
+
+.sidebar {
+  /* background-color: #111 !important;
+  color: #fff !important; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 255px;
+}
+
+
+.content {
+  /* background-color: #fff;
+  color: #111; */
+  height: 100vh;
+  flex: 1;
+  overflow-y: auto;
+  /* margin-left: 255px;
+  padding: 20px; */
+  padding: 1rem;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .mob {
+      display: none !important;
+
+
+  }
+}

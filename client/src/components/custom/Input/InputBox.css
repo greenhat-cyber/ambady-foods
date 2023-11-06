@@ -1,0 +1,80 @@
+.searchbar {
+    width: 100%;
+    max-width: 300px;
+    display: inline-flex;
+}
+
+.searchbar--max-width {
+    max-width: 100%;
+}
+
+.searchbar__input {
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ffc107;
+    border-radius: 9px 0 0 9px;
+    background: #ffffff;
+    font-size: .7rem;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+
+/* .searchbar__input:focus {
+    background: white;
+} */
+
+.searchbar__input::placeholder {
+    color: #7d7d7d;
+}
+
+.searchbar__button {
+    width: 40px;
+    background: #ffc107;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 9px 9px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.searchbar__button:active {
+    background-color: #ecb100;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* auth-inp */
+
+
+
+/* .auth-inp {
+    background-color: #fff;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.101);
+    border-radius: 10px;
+    border: solid 1px rgba(128, 128, 128, 0.093);
+} */
+
+@media only screen and (min-width:992px) {
+    .auth-inp {
+        width: 400px !important;
+    }
+
+}
+@media only screen and (max-width:992px) {
+    .auth-inp {
+        width: 350px !important;
+    }
+
+}
+
+.login-body {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
