@@ -21,10 +21,51 @@
   padding: 0;
 }
 
-.activeLi{
-  border-bottom: solid 3px #fff !important;
-  /* transition: ease-in 0.5s; */
+.hoverLi:hover{
+  transition: .3s;
+  color: #111111a9;
 }
+
+.activeDot{
+  border-bottom: solid 2px #ffc107;
+  /* border-radius: 10%; */
+  /* outline: #fff solid 1px; */
+  /* outline: #1111113a solid 1px; */
+  /* background-color: #ffc107; */
+}
+
+.line-anime {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
+.line-anime::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff; /* Change this to your desired color */
+  transition: width 0.3s ease-in-out;
+}
+
+.line-anime:hover::before {
+  width: 100%;
+}
+
+/* @keyframes underlineAnimation {
+  from {
+      border-image-source: linear-gradient(90deg, #00ff00, #ff0000);
+      border-image-slice: 1;
+      border-image-width: 0;
+  }
+  to {
+      border-image-width: 2px;
+  }
+} */
 
 .userProfile {
   width: 50px;
@@ -162,6 +203,15 @@
   background-color: transparent;
   /* border-top-left-radius: 20px;
   box-shadow: -1px -10px 0 0 #fff; */
+}
+
+@media only screen and (max-width: 992px) {
+  .mob-nav {
+    display: none !important;
+  }
+  .mob-fake {
+    display: none !important;
+  }
 }
 
 /* @media only screen and (max-width: 992px) {

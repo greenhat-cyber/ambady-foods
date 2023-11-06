@@ -1,15 +1,25 @@
 import React from "react";
-import { Badge, Col, Row, Table } from "react-bootstrap";
-import CartCard from "../../components/custom/cartCard/CartCard";
-import { productData } from "../../util/data";
+import { Col, Row, Table } from "react-bootstrap";
 import InputBox from "../../components/custom/Input/InputBox";
 
 import "./Cart.css";
 
 import { RxCross2 } from "react-icons/rx";
 import { BiPlus, BiMinus } from "react-icons/bi";
+import { useCart } from "react-use-cart";
 
 const Cart = () => {
+  const { cartTotal, removeItem, items, updateItemQuantity, totalUniqueItems } =
+    useCart();
+
+
+  const quantityIncrement = (id, quantity) => {
+    updateItemQuantity(id, quantity + 1);
+  };
+  const quantityDecrement = (id, quantity) => {
+    updateItemQuantity(id, quantity - 1);
+  };
+
   const cartItem = [
     {
       image:
@@ -52,7 +62,7 @@ const Cart = () => {
       <div>
         <Row className="p-1 ps-4 pt-3">
           <Col>
-            <h4>My Cart (0)</h4>
+            <h4>My Cart ({totalUniqueItems})</h4>
           </Col>
           <Col
             className="newInp2 pe-4 pb-2"
@@ -79,83 +89,96 @@ const Cart = () => {
                     <th className="text-center">Quantity</th>
                   </tr>
                 </thead>
-                <tbody className="hover-table">
-                  <tr>
-                    <td>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "1rem",
-                        }}
-                      >
-                        <RxCross2 style={{ cursor: "pointer" }} />
-                        <img
-                          style={{ width: "80px", borderRadius: "10px" }}
-                          src="https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/victoria_sponge.jpg"
-                          alt="not found"
-                        />
-                        <p className="p-0 m-0">
-                          jksnkn jsh djdgsha jksdj ghshdi ghi
-                        </p>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          padding: "1.3rem",
-                        }}
-                      >
-                        {/* <p
+                <tbody>
+                  {items?.map((item) => {
+                    return (
+                      <tr className="hover-table">
+                        <td>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "1rem",
+                            }}
+                          >
+                            <RxCross2
+                              onClick={() => removeItem(item.id)}
+                              style={{ cursor: "pointer" }}
+                            />
+                            <img
+                              style={{ width: "80px", borderRadius: "10px" }}
+                              src={item?.image}
+                              alt="not found"
+                            />
+                            <p className="p-0 m-0">{item?.title}</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              padding: "1.3rem",
+                            }}
+                          >
+                            {/* <p
                           className="p-0 m-0"
                           style={{ color: "#ff0000", fontSize: "15px" }}
                         >
                           Out of Stock
                         </p> */}
-                        <p className="p-0 m-0" style={{ color: "#40ff00" }}>
-                          In Stock
-                        </p>
+                            <p className="p-0 m-0" style={{ color: "#40ff00" }}>
+                              In Stock
+                            </p>
 
-                        {/* <Badge bg="success">In Stock</Badge> */}
-                        {/* <Badge bg="danger">Out of Stock</Badge> */}
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          padding: "1.3rem",
-                        }}
-                      >
-                        ₹ 500
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          padding: "1rem",
-                        }}
-                      >
-                        <div className="qty-btn">
-                          <button>
-                            <BiPlus />
-                          </button>
-                          <p className="p-0 m-0">0</p>
-                          <button>
-                            <BiMinus />
-                          </button>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+                            {/* <Badge bg="success">In Stock</Badge> */}
+                            {/* <Badge bg="danger">Out of Stock</Badge> */}
+                          </div>
+                        </td>
+                        <td>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              padding: "1.3rem",
+                            }}
+                          >
+                            ₹ {item?.price}
+                          </div>
+                        </td>
+                        <td>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              padding: "1rem",
+                            }}
+                          >
+                            <div className="qty-btn">
+                              <button
+                                onClick={() =>
+                                  quantityIncrement(item?.id, item?.quantity)
+                                }
+                              >
+                                <BiPlus />
+                              </button>
+                              <p className="p-0 m-0">{item?.quantity}</p>
+                              <button
+                                onClick={() =>
+                                  quantityDecrement(item?.id, item?.quantity)
+                                }
+                              >
+                                <BiMinus />
+                              </button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </Table>
             </Col>
@@ -164,8 +187,8 @@ const Cart = () => {
                 <p className="p-2 m-0 mt-3 pt-3">PRICE DETAILS</p>
                 <hr />
                 <Row className="p-3">
-                  <Col>Price (9 items)</Col>
-                  <Col className="text-end">₹ 5555</Col>
+                  <Col>Price ({totalUniqueItems} items)</Col>
+                  <Col className="text-end">₹ {cartTotal}</Col>
                 </Row>
                 <Row className="p-3">
                   <Col>Delivery Charges</Col>
@@ -178,7 +201,7 @@ const Cart = () => {
                 <hr />
                 <Row className="p-3">
                   <Col>Total Amount</Col>
-                  <Col className="text-end">₹ 5554845</Col>
+                  <Col className="text-end">₹ {cartTotal + 55}</Col>
                 </Row>
                 <hr />
                 <Row className="p-3">
@@ -210,20 +233,22 @@ const Cart = () => {
             overflowY: "scroll",
           }}
         >
-          {cartItem.map((items, idx) => {
+          {items.map((item, idx) => {
             return (
               <Row className="mt-1 mb-1" key={idx}>
                 <Col>
                   <div className="cart-item-mob">
                     <Row className="m-0 p-0">
-                      <Col style={{ 
-                        display: "flex", 
-                        alignItems: "center",
-                        width:"50%"
-                        }}>
+                      <Col
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "50%",
+                        }}
+                      >
                         <img
                           style={{ width: "100px", borderRadius: "10px" }}
-                          src={items.image}
+                          src={item.image}
                           alt="not found"
                         />
                       </Col>
@@ -233,12 +258,15 @@ const Cart = () => {
                           alignItems: "flex-start",
                           flexDirection: "column",
                           justifyContent: "center",
-                          width:"30%"
+                          width: "30%",
                         }}
                       >
-                        <p className="m-0 p-0">{items.name}</p>
-                        {items.stock ? (
-                          <p className="p-0 m-0 me-4" style={{ color: "#40ff00" }}>
+                        <p className="m-0 p-0">{item.name}</p>
+                        {item.stock ? (
+                          <p
+                            className="p-0 m-0 me-4"
+                            style={{ color: "#40ff00" }}
+                          >
                             In Stock
                           </p>
                         ) : (
@@ -250,35 +278,44 @@ const Cart = () => {
                           </p>
                         )}
 
-                        <p className="m-0 p-0">₹ {items.price}</p>
+                        <p className="m-0 p-0">₹ {item.price}</p>
                       </Col>
                       <Col
                         style={{
                           display: "flex",
                           alignItems: "flex-end",
                           flexDirection: "column",
-                          width:"100%"
+                          width: "100%",
                         }}
-                        >
+                      >
                         <div
                           style={{
                             display: "flex",
                             alignItems: "flex-end",
                             flexDirection: "column",
-                            width:"100%"
+                            width: "100%",
                             // justifyContent:"flex-end"
                           }}
                         >
                           <RxCross2
+                            onClick={() => removeItem(item.id)}
                             style={{ cursor: "pointer", marginRight: ".3rem" }}
                           />
                         </div>
                         <div className="qty-btn-mob">
-                          <button>
+                          <button
+                            onClick={() =>
+                              quantityIncrement(item?.id, item?.quantity)
+                            }
+                          >
                             <BiPlus />
                           </button>
-                          <p className="p-0 m-0">0</p>
-                          <button>
+                          <p className="p-0 m-0">{item?.quantity}</p>
+                          <button
+                            onClick={() =>
+                              quantityDecrement(item?.id, item?.quantity)
+                            }
+                          >
                             <BiMinus />
                           </button>
                         </div>
@@ -293,7 +330,7 @@ const Cart = () => {
 
         {/* place order card */}
 
-        <Row className="m-0 p-0 fixed-bottom" style={{zIndex:"1"}}>
+        <Row className="m-0 p-0 fixed-bottom" style={{ zIndex: "1" }}>
           <Col className="m-2 p-0">
             <div className="place-order-card">
               <div
@@ -309,8 +346,8 @@ const Cart = () => {
               </div>
               <hr />
               <Row className="p-1">
-                <Col>Price (9 items)</Col>
-                <Col className="text-end">₹ 5555</Col>
+                <Col>Price ({totalUniqueItems} items)</Col>
+                <Col className="text-end">₹ {cartTotal}</Col>
               </Row>
               <Row className="p-1">
                 <Col>Delivery Charges</Col>
@@ -319,7 +356,7 @@ const Cart = () => {
               <hr />
               <Row className="p-1">
                 <Col>Total Amount</Col>
-                <Col className="text-end">₹ 5554845</Col>
+                <Col className="text-end">₹ {cartTotal + 55}</Col>
               </Row>
               {/* <hr /> */}
               {/* <Row className="p-1">

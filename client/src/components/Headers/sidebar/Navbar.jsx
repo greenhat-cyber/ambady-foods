@@ -7,10 +7,11 @@ import { HiShoppingCart } from "react-icons/hi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 import { Dropdown } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 const Navbar = () => {
   const [toggle, settoggle] = useState(false);
-  const [toggle1, settoggle1] = useState("2");
   const [loc, setLoc] = useState("");
+  const { totalUniqueItems } = useCart();
 
   useEffect(() => {
     const path = window.location.pathname;
@@ -39,7 +40,7 @@ const Navbar = () => {
       path: "/wishlist",
     },
     {
-      title: `Cart(${toggle1})`,
+      title: `Cart(${totalUniqueItems})`,
       icon: <HiShoppingCart />,
       path: "/cart",
     },

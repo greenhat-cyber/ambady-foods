@@ -68,7 +68,7 @@ export const categoryData = [
 export const productData = [
   {
     id: 1,
-    price:"₹ 500",
+    price:500,
     title: "Lemon cheesecake",
     previewDescription: "Lemon cheesecake is a tangy and creamy dessert with a graham cracker or cookie crust.",
     detailDescription:
@@ -78,7 +78,7 @@ export const productData = [
   },
   {
     id: 2,
-    price:"₹ 500",
+    price:500,
     title: "Victoria sponge",
     previewDescription: "Victoria sponge is a classic British cake that consists of two layers of buttery sponge cake",
     detailDescription:
@@ -88,7 +88,7 @@ export const productData = [
   },
   {
     id: 3,
-    price:"₹ 500",
+    price:500,
     title: "Carrot cake",
     previewDescription: "Carrot cake is a moist and flavorful cake that typically includes grated carrots",
     detailDescription:
@@ -98,7 +98,7 @@ export const productData = [
   },
   {
     id: 4,
-    price:"₹ 500",
+    price:500,
     title: "Banana cake",
     previewDescription: "Banana cake is a cake prepared using banana",
     detailDescription:
@@ -108,7 +108,7 @@ export const productData = [
   },
   {
     id: 5,
-    price:"₹ 500",
+    price:500,
     title: "Birthday cake",
     previewDescription: "a yearly treat",
     detailDescription:
@@ -118,7 +118,7 @@ export const productData = [
   },
   {
     id: 6,
-    price:"₹ 500",
+    price:500,
     title: "Avocado cake",
     previewDescription: "Avocado cake is a cake prepared using avocado",
     detailDescription:
@@ -128,7 +128,7 @@ export const productData = [
   },
   {
     id: 7,
-    price:"₹ 500",
+    price:500,
     title: "Chocolate cake",
     previewDescription:
       "Chocolate cake is a cake flavored with melted chocolate, cocoa powder, or sometimes both.",
@@ -139,7 +139,7 @@ export const productData = [
   },
   {
     id: 8,
-    price:"₹ 500",
+    price:500,
     title: "Clementine cake",
     previewDescription:
       "Clementine cake is a cake prepared with clementine fruit",
@@ -150,7 +150,7 @@ export const productData = [
   },
   {
     id: 9,
-    price:"₹ 500",
+    price:500,
     title: "Fudge cake",
     previewDescription: "A fudge cake is a chocolate cake containing fudge",
     detailDescription:
@@ -160,7 +160,7 @@ export const productData = [
   },
   {
     id: 10,
-    price:"₹ 500",
+    price:" 500",
     title: "Spice cake",
     previewDescription:
       "Spice cake is traditionally flavored with a mixture of spices.",
@@ -171,7 +171,7 @@ export const productData = [
   },
   {
     id: 11,
-    price:"₹ 500",
+    price:500,
     title: "Jewish apple cake",
     previewDescription:
       "Jewish apple cake is a kind of dense cake made with apples and sold mostly in Pennsylvania in the United States.",
@@ -182,7 +182,7 @@ export const productData = [
   },
   {
     id: 12,
-    price:"₹ 500",
+    price:500,
     title: "Plum cake",
     previewDescription:
       "Plum cake refers to a wide range of cakes made with either dried fruit or with fresh fruit.",
@@ -193,7 +193,7 @@ export const productData = [
   },
   {
     id: 13,
-    price:"₹ 500",
+    price:500,
     title: "Apple cake",
     previewDescription:
       "Apple cake is a popular dessert produced with the main ingredient of apples.",
@@ -204,7 +204,7 @@ export const productData = [
   },
   {
     id: 14,
-    price:"₹ 500",
+    price:500,
     title: "Bulla cake",
     previewDescription:
       "Bulla cake is a rich Jamaican cake made with molasses and spiced with ginger and nutmeg.",
@@ -215,7 +215,7 @@ export const productData = [
   },
   {
     id: 15,
-    price:"₹ 500",
+    price:500,
     title: "Jaffa cake",
     previewDescription: "Jaffa Cakes are biscuit-sized cakes.",
     detailDescription:
@@ -225,7 +225,7 @@ export const productData = [
   },
   {
     id: 16,
-    price:"₹ 500",
+    price:500,
     title: "Strawberry cake",
     previewDescription:
       "Strawberry cake is a crumbly bread made by strawberry.",
@@ -234,4 +234,76 @@ export const productData = [
     image:
       "https://raw.githubusercontent.com/filippella/Dagger-Rx-Database-MVP/master/cakes/strawberry_cake.jpg",
   },
+  {
+    id: 17,
+    price: 500,
+    title: "Red Velvet Cake",
+    previewDescription: "Red Velvet Cake is a moist and velvety cake with a distinctive red color.",
+    detailDescription:
+      "Red Velvet Cake is a classic American dessert known for its striking red color and its moist, velvety texture. It's typically made with buttermilk, vinegar, and cocoa powder, which react together to create its unique flavor and color. The cake is often frosted with cream cheese frosting, adding a delightful tangy contrast to the sweetness of the cake. Red Velvet Cake is a popular choice for special occasions and holidays, especially Valentine's Day.",
+    image: "https://picsum.photos/300/200?random=17",
+  },
+  {
+    id: 18,
+    price: 500,
+    title: "Coconut Cake",
+    previewDescription: "Coconut Cake is a tropical delight made with coconut flakes and coconut milk.",
+    detailDescription:
+      "Coconut Cake is a tropical-inspired dessert that's loved for its sweet, coconutty flavor. It's made with coconut flakes and often features a coconut milk-based frosting. Some variations include filling the cake with coconut cream or custard. The cake is often decorated with toasted coconut flakes, giving it a crunchy and flavorful topping. Coconut cake is a refreshing and delightful treat for coconut lovers.",
+    image: "https://picsum.photos/300/200?random=18",
+  },
+  {
+    id: 19,
+    price: 500,
+    title: "Pineapple Upside-Down Cake",
+    previewDescription: "Pineapple Upside-Down Cake is a retro classic with caramelized pineapple and cherries.",
+    detailDescription:
+      "Pineapple Upside-Down Cake is a retro classic that features pineapple rings, maraschino cherries, and a caramelized topping. The cake batter is poured over these ingredients, and when it's baked and flipped over, you get a beautiful presentation with the fruit on top. The caramelized topping adds a sweet and sticky glaze to the cake, making it a delightful treat.",
+    image: "https://picsum.photos/300/200?random=19",
+  },
+  {
+    id: 20,
+    price: 500,
+    title: "Lava Cake",
+    previewDescription: "Lava Cake is a rich and gooey dessert with a molten chocolate center.",
+    detailDescription:
+      "Lava Cake, also known as Molten Chocolate Cake, is a decadent dessert known for its oozy, molten chocolate center. It's typically served warm and often with a scoop of vanilla ice cream. The cake's exterior is usually firm, while the center remains liquid and velvety, creating a delightful contrast in textures. Lava Cakes are a chocolate lover's dream come true.",
+    image: "https://picsum.photos/300/200?random=20",
+  },{
+    id: 21,
+    price: 500,
+    title: "Mango Cake",
+    previewDescription: "Mango Cake is a fruity delight made with fresh mangoes.",
+    detailDescription:
+      "Mango Cake is a tropical-inspired dessert that's bursting with the flavor of fresh mangoes. It's made with pureed mangoes and often features a mango-flavored frosting. Some variations include diced mango chunks within the cake for added texture and sweetness. Mango cake is a refreshing and delightful treat, especially during the summer season.",
+    image: "https://picsum.photos/300/200?random=21",
+  },
+  {
+    id: 22,
+    price: 500,
+    title: "Blueberry Muffin",
+    previewDescription: "Blueberry Muffin is a classic breakfast treat filled with juicy blueberries.",
+    detailDescription:
+      "Blueberry Muffins are a beloved breakfast classic. These muffins are made with juicy blueberries that burst with flavor when baked. They have a soft and fluffy texture, often with a crumbly streusel topping. Blueberry muffins are best enjoyed warm with a cup of coffee or tea.",
+    image: "https://picsum.photos/300/200?random=22",
+  },
+  {
+    id: 23,
+    price: 500,
+    title: "Strawberry Shortcake",
+    previewDescription: "Strawberry Shortcake is a sweet dessert with fresh strawberries and whipped cream.",
+    detailDescription:
+      "Strawberry Shortcake is a delightful dessert made with layers of sweet, flaky biscuits or sponge cake, fresh strawberries, and whipped cream. The strawberries are often macerated to release their juices, creating a sweet and tangy topping. This classic dessert is a perfect choice for a summer treat.",
+    image: "https://picsum.photos/300/200?random=23",
+  },
+  {
+    id: 24,
+    price: 500,
+    title: "Cherry Pie",
+    previewDescription: "Cherry Pie is a classic American pie with a sweet and tart cherry filling.",
+    detailDescription:
+      "Cherry Pie is a beloved American dessert featuring a flaky pie crust and a sweet and tart cherry filling. It's a classic choice for picnics and family gatherings. Cherry pie is often served with a scoop of vanilla ice cream for the perfect combination of flavors and textures.",
+    image: "https://picsum.photos/300/200?random=24",
+  },
+
 ];

@@ -14,6 +14,10 @@ const ProductCard = (props) => {
     setActive("animate");
   };
 
+  const BuyNow = (id) => {
+    navigate(`/product-details/${id}`)
+  };
+
   return (
     <div className="card-body1 row shadow-sm  ">
       <Col
@@ -64,7 +68,8 @@ const ProductCard = (props) => {
           <Button
             className="newbtn"
             style={{ backgroundColor: "#ffc107", color: "#111" }}
-            onClick={()=>navigate(`/product-details/${props.id}`)}
+            onClick={()=>BuyNow(props.id)}
+            // onClick={()=>navigate(`/product-details/${props.id}`)}
           >
             Buy Now
           </Button>

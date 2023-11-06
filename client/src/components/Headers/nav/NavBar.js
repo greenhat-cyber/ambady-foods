@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import "./MobNav.css";
+import "./NavBar.css";
 import { Col, Dropdown, Row } from "react-bootstrap";
 import InputBox from "../../custom/Input/InputBox";
 import { BiLogOutCircle } from "react-icons/bi";
 import { BsFillGearFill } from "react-icons/bs";
 import { NavLink, useLocation } from "react-router-dom";
+import { useCart } from "react-use-cart";
 
-const MobNav = () => {
+const NavBar = () => {
   const [search, setSearch] = useState("");
+  const { totalUniqueItems } = useCart();
+
   const handleInputChange = (e) => {
     setSearch(e.target.value);
   };
@@ -35,7 +38,7 @@ const MobNav = () => {
       path: "/wishlist",
     },
     {
-      title: `Cart(0)`,
+      title: `Cart(${totalUniqueItems})`,
       // icon: <HiShoppingCart />,
       path: "/cart",
     },
@@ -83,10 +86,11 @@ const MobNav = () => {
                 <NavLink
                   key={idx}
                   to={items.path}
-                  style={{ textDecoration: "none", color: "black",transition:"ease-in 0.5s" }}
+                  style={{ textDecoration: "none", color: "black", transition: "ease-in 0.5s" }}
                 >
                   <ul
-                    className={`${loc.pathname === items.path ? "activeLi" : ""} p-0 m-3 `}
+                    // className="m-0 p-0 hoverLi"
+                  className={`${loc.pathname === items.path ? "activeDot" : ""} p-0 m-3`}
 
                   >
                     <li
@@ -95,9 +99,11 @@ const MobNav = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        flexDirection: "column"
                       }}
                     >
                       <p className="p=0 m-0 mt-1 ">{items.title}</p>
+                      {/* <div className={`${loc.pathname === items.path ? "activeDot" : ""} p-0 m-0`} ></div> */}
                     </li>
                   </ul>
                 </NavLink>
@@ -147,4 +153,4 @@ const MobNav = () => {
   );
 };
 
-export default MobNav;
+export default NavBar;

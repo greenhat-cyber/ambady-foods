@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./MobNav.css";
+import "./NavBar.css";
 import { HiMenuAlt2, HiShoppingCart } from "react-icons/hi";
 import { BsFillBoxFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";

@@ -1,9 +1,9 @@
-import Navbar from "../components/Headers/navbar/Navbar";
 import React from "react";
 import "./sidebar.css";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
-import MobNav from "../components/Headers/mob-nav/MobNav";
-import MobBottom from "../components/Headers/mob-nav/MobBottom";
+import MobBottom from "../components/Headers/nav/MobBottom";
+import NavBar from "../components/Headers/nav/NavBar";
+import Footer from "../components/Footer/Footer";
 const Default = () => {
   let auth = localStorage.getItem("token");
 
@@ -17,7 +17,7 @@ const Default = () => {
 
   return (
     <>
-      <MobNav />
+      <NavBar />
       <div className="mob">
         <MobBottom />
       </div>
@@ -25,9 +25,10 @@ const Default = () => {
         {/* <div className="sidebar" >
           <Navbar />
         </div> */}
-        <div className="content p-3" ref={mainContent}>
+        <div className="content" ref={mainContent}>
           <Outlet />
           {/* {auth ? <Outlet /> : <Navigate to={"/login"} />} */}
+          <Footer/>
         </div>
       </div>
     </>
