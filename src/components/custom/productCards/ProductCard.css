@@ -1,0 +1,84 @@
+:root {
+  --primary: #17457a;
+  --secondary: #4488c8;
+}
+
+.card-body1 {
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: .5rem;
+  margin-bottom: 2rem;
+}
+
+
+.HeartAnimation {
+  position: relative;
+  bottom: .8rem;
+  left: 1rem;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+  background-repeat: no-repeat;
+  background-size: 290%;
+  background-position: left;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.animate {
+  animation: heart-burst .8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+  0% {
+    background-position: left
+  }
+
+  100% {
+    background-position: right
+  }
+}
+.newbtn{
+  background-color: var(--secondary) !important;
+}
+
+.newbtn:hover {
+  transition: ease 500ms;
+  transform: scale(.9);
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .newbtn {
+    font-size: .7rem !important;
+    /* height: fit-content; */
+  }
+
+  .card-img1 {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+}
+
+@media only screen and (max-width: 740px) {
+  .newbtn {
+    font-size: .5rem !important;
+    /* height: fit-content; */
+  }
+
+  .newbtn2 {
+    font-size: .5rem !important;
+    /* height: fit-content; */
+  }
+
+  .card-img1 {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+}

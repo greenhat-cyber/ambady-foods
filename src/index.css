@@ -1,0 +1,58 @@
+:root {
+  --primary: #17457a;
+  --secondary: #4488c8;
+}
+
+body {
+  margin: 0;
+
+}
+
+* {
+  font-family: "Signika Negative";
+  /* background-color: rgb(244, 244, 244); */
+}
+
+.btn {
+  outline: none !important;
+  border: none !important;
+}
+
+.inp-style {
+  border-radius: 30px !important;
+}
+
+.page-link:focus,
+.page-link:active {
+  overflow: unset !important;
+  border: unset !important;
+  outline: unset !important;
+
+}
+
+.form-control:focus {
+  border: solid 1px var(--secondary) !important;
+
+  background-color: #fff !important;
+}
+
+input:active,
+input:focus,
+input:hover,
+input:visited,
+input.active,
+input.focus,
+a.focus,
+input.hover,
+input.visited,
+button:active,
+button:focus,
+button:hover,
+button:visited,
+button.active,
+button.focus,
+button.hover,
+button.visited {
+  box-shadow: unset !important;
+  outline: 0 !important;
+}
