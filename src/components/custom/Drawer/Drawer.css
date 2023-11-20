@@ -1,0 +1,15 @@
+:root {
+    --primary: #17457a;
+    --secondary: #4488c8;
+}
+
+.drawer {
+    /* width: 75%; */
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    z-index: 6000;
+    transition: ease all .5s;
+
+}

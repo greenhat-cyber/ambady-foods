@@ -1,0 +1,31 @@
+:root {
+  --primary: #17457a;
+  --secondary: #4488c8;
+}
+
+.pagination a {
+  /* background-color: #ffca2c !important; */
+  color: var(--primary) !important;
+  background-color: white !important;
+  border-color: white !important;
+  border-radius: 100% !important;
+}
+
+.pagination a:hover {
+    color: var(--primary) !important;
+    /* background-color: #ffca2c !important; */
+    border-color: var(--primary) !important;
+}
+.page-item .active {
+    color: var(--primary) !important;
+    border-radius: 100% !important;
+    background-color: var(--secondary) !important;
+  }
+
+
+  span.page-link{
+    background-color: var(--secondary) !important;
+    border-color: unset !important;
+    border-radius: 100% !important;
+  }
+
