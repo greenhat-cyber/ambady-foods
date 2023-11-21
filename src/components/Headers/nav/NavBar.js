@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { Col, Dropdown, Row } from "react-bootstrap";
-import InputBox from "../../custom/Input/InputBox";
-import { BiLogOutCircle } from "react-icons/bi";
-import { BsFillGearFill } from "react-icons/bs";
+// import InputBox from "../../custom/Input/InputBox";
 import { NavLink, useLocation } from "react-router-dom";
 import { useCart } from "react-use-cart";
+
+// icons
+
+import { BiLogOutCircle } from "react-icons/bi";
+import { BsFillGearFill } from "react-icons/bs";
+import { GiFoodTruck } from "react-icons/gi";
+
 
 const NavBar = () => {
   const [search, setSearch] = useState("");
@@ -66,10 +71,10 @@ const NavBar = () => {
             alignItems: "center",
             justifyContent: "flex-start",
             paddingLeft: "1rem",
-            color:"#fff"
+            color:"#fff",
           }}
         >
-          Ambady Foods
+          <GiFoodTruck style={{fontSize:"50px"}} />
         </Col>
         <Col
          className="navLists"
@@ -126,7 +131,7 @@ const NavBar = () => {
               <img
                 className="userProfile"
                 alt="neha"
-                src="https://images.pexels.com/photos/2859616/pexels-photo-2859616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://images.pexels.com/photos/3224944/pexels-photo-3224944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               />
             </Dropdown.Toggle>
 
